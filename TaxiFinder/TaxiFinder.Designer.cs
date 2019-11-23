@@ -59,6 +59,7 @@
             this.ResultsBox.Size = new System.Drawing.Size(425, 668);
             this.ResultsBox.TabIndex = 0;
             this.ResultsBox.Text = "";
+            this.ResultsBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ResultsBox_HelpRequested);
             // 
             // ClearButton
             // 
@@ -72,6 +73,7 @@
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            this.ClearButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ClearButton_HelpRequested);
             // 
             // ConvertToHTMLButton
             // 
@@ -83,6 +85,7 @@
             this.ConvertToHTMLButton.Text = "Convert to HTML";
             this.ConvertToHTMLButton.UseVisualStyleBackColor = true;
             this.ConvertToHTMLButton.Click += new System.EventHandler(this.ConvertToHTMLButton_Click);
+            this.ConvertToHTMLButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ConvertToHTMLButton_HelpRequested);
             // 
             // BrandCheck
             // 
@@ -95,6 +98,7 @@
             this.BrandCheck.TabIndex = 3;
             this.BrandCheck.Text = " Brand:";
             this.BrandCheck.UseVisualStyleBackColor = true;
+            this.BrandCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.BrandCheck_HelpRequested);
             // 
             // BrandBox
             // 
@@ -103,6 +107,7 @@
             "Alfa Romeo",
             "Aston Martin",
             "Audi",
+            "Skoda",
             "Bentley",
             "BMW",
             "Bugatti",
@@ -180,6 +185,7 @@
             this.ModelCheck.TabIndex = 5;
             this.ModelCheck.Text = " Model:";
             this.ModelCheck.UseVisualStyleBackColor = true;
+            this.ModelCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ModelCheck_HelpRequested);
             // 
             // ColorBox
             // 
@@ -228,6 +234,7 @@
             this.ColorCheck.TabIndex = 7;
             this.ColorCheck.Text = " Color:";
             this.ColorCheck.UseVisualStyleBackColor = true;
+            this.ColorCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ColorCheck_HelpRequested);
             // 
             // DriverBox
             // 
@@ -251,6 +258,7 @@
             this.DriverCheck.TabIndex = 9;
             this.DriverCheck.Text = "Driver:";
             this.DriverCheck.UseVisualStyleBackColor = true;
+            this.DriverCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DriverCheck_HelpRequested);
             // 
             // NumberBox
             // 
@@ -336,6 +344,7 @@
             this.NumberCheck.TabIndex = 11;
             this.NumberCheck.Text = "Number:";
             this.NumberCheck.UseVisualStyleBackColor = true;
+            this.NumberCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.NumberCheck_HelpRequested);
             // 
             // DomButton
             // 
@@ -348,6 +357,7 @@
             this.DomButton.TabStop = true;
             this.DomButton.Text = "DOM API";
             this.DomButton.UseVisualStyleBackColor = true;
+            this.DomButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DomButton_HelpRequested);
             // 
             // SaxButton
             // 
@@ -360,6 +370,7 @@
             this.SaxButton.TabStop = true;
             this.SaxButton.Text = "SAX API";
             this.SaxButton.UseVisualStyleBackColor = true;
+            this.SaxButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.SaxButton_HelpRequested);
             // 
             // LinqButton
             // 
@@ -372,6 +383,7 @@
             this.LinqButton.TabStop = true;
             this.LinqButton.Text = "Linq to XML";
             this.LinqButton.UseVisualStyleBackColor = true;
+            this.LinqButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.LinqButton_HelpRequested);
             // 
             // SearchButton
             // 
@@ -382,6 +394,7 @@
             this.SearchButton.TabIndex = 16;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.SearchButton_HelpRequested);
             // 
             // TaxiFinder
             // 
@@ -414,6 +427,7 @@
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TaxiFinder";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "TaxiFinder";

@@ -114,4 +114,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TaxiFinder_SearchButton_HelpRequested_Click_on_label_to_start_searching_with_one_of_three_possible_search_engines" xml:space="preserve">
+    <value>Click on label to start searching with one of three possible search engines</value>
+  </data>
 </root>
