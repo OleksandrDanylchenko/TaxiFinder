@@ -1,4 +1,5 @@
 # TaxiFinder
+# UNFINISHED
 OOP Laboratory Work 3
 
 Application for finding appropriate taxi car through filters in provided XML files. 

@@ -51,6 +51,7 @@
             // ResultsBox
             // 
             this.ResultsBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ResultsBox.Enabled = false;
             this.ResultsBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultsBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ResultsBox.Location = new System.Drawing.Point(544, 12);
