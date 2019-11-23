@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<taxies>
+  <taxi>
+    <brand>Mercedes</brand>
+    <model>AMG E43 4MATIC</model>
+    <color>Black</color>
+    <class>Premium</class>
+    <driver>Kononov Vasily</driver>
+    <number>AA5151AA</number>
+  </taxi>
+  <taxi>
+    <brand>Mercedes</brand>
+    <model>GLS 400D 4MATIC</model>
+    <color>Green</color>
+    <class>Premium</class>
+    <driver>Pershin Anton</driver>
+    <number>AA4251BK</number>
+  </taxi>
+  <taxi>
+    <brand>Mercedes</brand>
+    <model>AMG CLS 53 4MATIC+</model>
+    <color>Silver</color>
+    <class>Premium</class>
+    <driver>Seman Ivan</driver>
+    <number>AA3123MB</number>
+  </taxi>
+  <taxi>
+    <brand>Mercedes</brand>
+    <model>AMG GT 63S 4MATIC+</model>
+    <color>Red</color>
+    <class>Premium</class>
+    <driver>Votyakova Natalia</driver>
+    <number>AA1256MM</number>
+  </taxi>
+  <taxi>
+    <brand>Mercedes</brand>
+    <model>AMG SLC 43</model>
+    <color>Blue</color>
+    <class>Premium</class>
+    <driver>Сhernukha Andrey</driver>
+    <number>AA3333PL</number>
+  </taxi>
+</taxies>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<taxies>
+  <taxi>
+    <brand>Renault</brand>
+    <model>Logan</model>
+    <color>Metal</color>
+    <class>Standart</class>
+    <driver>Lozinsky Igor</driver>
+    <number>AA1637VK</number>
+  </taxi>
+  <taxi>
+    <brand>Renault</brand>
+    <model>Sandero</model>
+    <color>White</color>
+    <class>Standart</class>
+    <driver>Veskov Andrey</driver>
+    <number>AA7421VQ</number>
+  </taxi>
+  <taxi>
+    <brand>Skoda</brand>
+    <model>Octavia</model>
+    <color>Black</color>
+    <class>Standart</class>
+    <driver>Makeev Vladislav</driver>
+    <number>BK1526AA</number>
+  </taxi>
+  <taxi>
+    <brand>Skoda</brand>
+    <model>Fabia</model>
+    <color>Red</color>
+    <class>Standart</class>
+    <driver>Krapinevich Alexander</driver>
+    <number>AA1257TT</number>
+  </taxi>
+  <taxi>
+    <brand>Skoda</brand>
+    <model>Kodiaq</model>
+    <color>Silver</color>
+    <class>Premium</class>
+    <driver>Averin Alexander</driver>
+    <number>AA3278FO</number>
+  </taxi>
+</taxies>
