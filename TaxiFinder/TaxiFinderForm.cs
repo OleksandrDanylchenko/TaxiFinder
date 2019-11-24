@@ -6,6 +6,7 @@ namespace TaxiFinder
 {
     public partial class TaxiFinderForm : Form
     {
+        List<(string service, List<Taxi> foundedTaxis)> results = new List<(string, List<Taxi>)>();
 
         public TaxiFinderForm()
         {
@@ -14,9 +15,8 @@ namespace TaxiFinder
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            List<(string service, List<Taxi> foundedTaxis)> results = Searcher.ExecuteSearch(this);
-            return;
-            //TODO PRINT ON RESULTS BOX
+            results = Searcher.ExecuteSearch(this);
+            ResultsPrinter.Print(results, ResultsBox);
         }
 
         private void ClearButton_Click(object sender, EventArgs e)

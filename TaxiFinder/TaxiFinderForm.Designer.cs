@@ -55,7 +55,7 @@
             this.ClearButton.AutoEllipsis = true;
             this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.ClearButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.Location = new System.Drawing.Point(544, 686);
+            this.ClearButton.Location = new System.Drawing.Point(542, 904);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(163, 55);
             this.ClearButton.TabIndex = 1;
@@ -67,7 +67,7 @@
             // ConvertToHTMLButton
             // 
             this.ConvertToHTMLButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConvertToHTMLButton.Location = new System.Drawing.Point(712, 686);
+            this.ConvertToHTMLButton.Location = new System.Drawing.Point(710, 904);
             this.ConvertToHTMLButton.Name = "ConvertToHTMLButton";
             this.ConvertToHTMLButton.Size = new System.Drawing.Size(259, 55);
             this.ConvertToHTMLButton.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.BrandCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.BrandCheck.AutoSize = true;
             this.BrandCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrandCheck.Location = new System.Drawing.Point(12, 141);
+            this.BrandCheck.Location = new System.Drawing.Point(13, 248);
             this.BrandCheck.Name = "BrandCheck";
             this.BrandCheck.Size = new System.Drawing.Size(128, 39);
             this.BrandCheck.TabIndex = 3;
@@ -148,7 +148,7 @@
             this.BrandBox.BackColor = System.Drawing.SystemColors.Menu;
             this.BrandBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrandBox.ForeColor = System.Drawing.Color.Black;
-            this.BrandBox.Location = new System.Drawing.Point(147, 144);
+            this.BrandBox.Location = new System.Drawing.Point(148, 251);
             this.BrandBox.MaxLength = 12;
             this.BrandBox.Name = "BrandBox";
             this.BrandBox.Size = new System.Drawing.Size(392, 35);
@@ -159,7 +159,7 @@
             // 
             this.ModelBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ModelBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBox.Location = new System.Drawing.Point(147, 200);
+            this.ModelBox.Location = new System.Drawing.Point(148, 307);
             this.ModelBox.Name = "ModelBox";
             this.ModelBox.Size = new System.Drawing.Size(392, 35);
             this.ModelBox.TabIndex = 6;
@@ -170,7 +170,7 @@
             this.ModelCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.ModelCheck.AutoSize = true;
             this.ModelCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelCheck.Location = new System.Drawing.Point(12, 197);
+            this.ModelCheck.Location = new System.Drawing.Point(13, 304);
             this.ModelCheck.Name = "ModelCheck";
             this.ModelCheck.Size = new System.Drawing.Size(128, 39);
             this.ModelCheck.TabIndex = 5;
@@ -208,7 +208,7 @@
             this.ColorBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ColorBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ColorBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorBox.Location = new System.Drawing.Point(147, 258);
+            this.ColorBox.Location = new System.Drawing.Point(148, 365);
             this.ColorBox.MaxLength = 10;
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.Size = new System.Drawing.Size(392, 35);
@@ -220,7 +220,7 @@
             this.ColorCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorCheck.AutoSize = true;
             this.ColorCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorCheck.Location = new System.Drawing.Point(12, 255);
+            this.ColorCheck.Location = new System.Drawing.Point(13, 362);
             this.ColorCheck.Name = "ColorCheck";
             this.ColorCheck.Size = new System.Drawing.Size(128, 39);
             this.ColorCheck.TabIndex = 7;
@@ -234,7 +234,7 @@
             this.DriverBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.DriverBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.DriverBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DriverBox.Location = new System.Drawing.Point(147, 369);
+            this.DriverBox.Location = new System.Drawing.Point(148, 476);
             this.DriverBox.Name = "DriverBox";
             this.DriverBox.Size = new System.Drawing.Size(392, 35);
             this.DriverBox.TabIndex = 10;
@@ -245,7 +245,7 @@
             this.DriverCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.DriverCheck.AutoSize = true;
             this.DriverCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DriverCheck.Location = new System.Drawing.Point(12, 366);
+            this.DriverCheck.Location = new System.Drawing.Point(13, 473);
             this.DriverCheck.Name = "DriverCheck";
             this.DriverCheck.Size = new System.Drawing.Size(128, 39);
             this.DriverCheck.TabIndex = 9;
@@ -320,7 +320,7 @@
             this.NumberBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.NumberBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NumberBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberBox.Location = new System.Drawing.Point(147, 421);
+            this.NumberBox.Location = new System.Drawing.Point(148, 528);
             this.NumberBox.MaxLength = 8;
             this.NumberBox.Name = "NumberBox";
             this.NumberBox.Size = new System.Drawing.Size(392, 35);
@@ -332,7 +332,7 @@
             this.NumberCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.NumberCheck.AutoSize = true;
             this.NumberCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberCheck.Location = new System.Drawing.Point(12, 418);
+            this.NumberCheck.Location = new System.Drawing.Point(13, 525);
             this.NumberCheck.Name = "NumberCheck";
             this.NumberCheck.Size = new System.Drawing.Size(128, 39);
             this.NumberCheck.TabIndex = 11;
@@ -344,7 +344,7 @@
             // 
             this.DomButton.AutoSize = true;
             this.DomButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DomButton.Location = new System.Drawing.Point(12, 495);
+            this.DomButton.Location = new System.Drawing.Point(13, 602);
             this.DomButton.Name = "DomButton";
             this.DomButton.Size = new System.Drawing.Size(139, 33);
             this.DomButton.TabIndex = 13;
@@ -357,7 +357,7 @@
             // 
             this.SaxButton.AutoSize = true;
             this.SaxButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaxButton.Location = new System.Drawing.Point(175, 495);
+            this.SaxButton.Location = new System.Drawing.Point(176, 602);
             this.SaxButton.Name = "SaxButton";
             this.SaxButton.Size = new System.Drawing.Size(139, 33);
             this.SaxButton.TabIndex = 14;
@@ -370,7 +370,7 @@
             // 
             this.LinqButton.AutoSize = true;
             this.LinqButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinqButton.Location = new System.Drawing.Point(339, 495);
+            this.LinqButton.Location = new System.Drawing.Point(340, 602);
             this.LinqButton.Name = "LinqButton";
             this.LinqButton.Size = new System.Drawing.Size(199, 33);
             this.LinqButton.TabIndex = 15;
@@ -382,7 +382,7 @@
             // SearchButton
             // 
             this.SearchButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchButton.Location = new System.Drawing.Point(12, 544);
+            this.SearchButton.Location = new System.Drawing.Point(13, 651);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(525, 55);
             this.SearchButton.TabIndex = 16;
@@ -402,7 +402,7 @@
             this.ClassBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ClassBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClassBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClassBox.Location = new System.Drawing.Point(147, 314);
+            this.ClassBox.Location = new System.Drawing.Point(148, 421);
             this.ClassBox.MaxLength = 10;
             this.ClassBox.Name = "ClassBox";
             this.ClassBox.Size = new System.Drawing.Size(392, 35);
@@ -414,7 +414,7 @@
             this.ClassCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.ClassCheck.AutoSize = true;
             this.ClassCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClassCheck.Location = new System.Drawing.Point(12, 311);
+            this.ClassCheck.Location = new System.Drawing.Point(13, 418);
             this.ClassCheck.Name = "ClassCheck";
             this.ClassCheck.Size = new System.Drawing.Size(128, 39);
             this.ClassCheck.TabIndex = 17;
@@ -431,7 +431,7 @@
             this.ResultsBox.Location = new System.Drawing.Point(546, 12);
             this.ResultsBox.Name = "ResultsBox";
             this.ResultsBox.ReadOnly = true;
-            this.ResultsBox.Size = new System.Drawing.Size(425, 668);
+            this.ResultsBox.Size = new System.Drawing.Size(425, 886);
             this.ResultsBox.TabIndex = 19;
             this.ResultsBox.Text = "";
             this.ResultsBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ResultsBox_HelpRequested);
@@ -443,7 +443,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(981, 753);
+            this.ClientSize = new System.Drawing.Size(981, 971);
             this.Controls.Add(this.ResultsBox);
             this.Controls.Add(this.ClassBox);
             this.Controls.Add(this.ClassCheck);
