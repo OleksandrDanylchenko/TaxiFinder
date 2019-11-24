@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaxiFinder));
-            this.ResultsBox = new System.Windows.Forms.RichTextBox();
             this.ClearButton = new System.Windows.Forms.Button();
             this.ConvertToHTMLButton = new System.Windows.Forms.Button();
             this.BrandCheck = new System.Windows.Forms.CheckBox();
@@ -46,21 +45,10 @@
             this.SaxButton = new System.Windows.Forms.RadioButton();
             this.LinqButton = new System.Windows.Forms.RadioButton();
             this.SearchButton = new System.Windows.Forms.Button();
+            this.ClassBox = new System.Windows.Forms.TextBox();
+            this.ClassCheck = new System.Windows.Forms.CheckBox();
+            this.ResultsBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // ResultsBox
-            // 
-            this.ResultsBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ResultsBox.Enabled = false;
-            this.ResultsBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResultsBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ResultsBox.Location = new System.Drawing.Point(544, 12);
-            this.ResultsBox.Name = "ResultsBox";
-            this.ResultsBox.ReadOnly = true;
-            this.ResultsBox.Size = new System.Drawing.Size(425, 668);
-            this.ResultsBox.TabIndex = 0;
-            this.ResultsBox.Text = "";
-            this.ResultsBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ResultsBox_HelpRequested);
             // 
             // ClearButton
             // 
@@ -93,7 +81,7 @@
             this.BrandCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.BrandCheck.AutoSize = true;
             this.BrandCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrandCheck.Location = new System.Drawing.Point(12, 138);
+            this.BrandCheck.Location = new System.Drawing.Point(12, 141);
             this.BrandCheck.Name = "BrandCheck";
             this.BrandCheck.Size = new System.Drawing.Size(128, 39);
             this.BrandCheck.TabIndex = 3;
@@ -160,27 +148,29 @@
             this.BrandBox.BackColor = System.Drawing.SystemColors.Menu;
             this.BrandBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrandBox.ForeColor = System.Drawing.Color.Black;
-            this.BrandBox.Location = new System.Drawing.Point(147, 141);
+            this.BrandBox.Location = new System.Drawing.Point(147, 144);
             this.BrandBox.MaxLength = 12;
             this.BrandBox.Name = "BrandBox";
             this.BrandBox.Size = new System.Drawing.Size(392, 35);
             this.BrandBox.TabIndex = 4;
+            this.BrandBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.BrandBox_HelpRequested);
             // 
             // ModelBox
             // 
             this.ModelBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ModelBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBox.Location = new System.Drawing.Point(147, 213);
+            this.ModelBox.Location = new System.Drawing.Point(147, 200);
             this.ModelBox.Name = "ModelBox";
             this.ModelBox.Size = new System.Drawing.Size(392, 35);
             this.ModelBox.TabIndex = 6;
+            this.ModelBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ModelBox_HelpRequested);
             // 
             // ModelCheck
             // 
             this.ModelCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.ModelCheck.AutoSize = true;
             this.ModelCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelCheck.Location = new System.Drawing.Point(12, 210);
+            this.ModelCheck.Location = new System.Drawing.Point(12, 197);
             this.ModelCheck.Name = "ModelCheck";
             this.ModelCheck.Size = new System.Drawing.Size(128, 39);
             this.ModelCheck.TabIndex = 5;
@@ -218,18 +208,19 @@
             this.ColorBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ColorBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ColorBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorBox.Location = new System.Drawing.Point(147, 288);
+            this.ColorBox.Location = new System.Drawing.Point(147, 258);
             this.ColorBox.MaxLength = 10;
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.Size = new System.Drawing.Size(392, 35);
             this.ColorBox.TabIndex = 8;
+            this.ColorBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ColorBox_HelpRequested);
             // 
             // ColorCheck
             // 
             this.ColorCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorCheck.AutoSize = true;
             this.ColorCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorCheck.Location = new System.Drawing.Point(12, 285);
+            this.ColorCheck.Location = new System.Drawing.Point(12, 255);
             this.ColorCheck.Name = "ColorCheck";
             this.ColorCheck.Size = new System.Drawing.Size(128, 39);
             this.ColorCheck.TabIndex = 7;
@@ -243,17 +234,18 @@
             this.DriverBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.DriverBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.DriverBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DriverBox.Location = new System.Drawing.Point(147, 363);
+            this.DriverBox.Location = new System.Drawing.Point(147, 369);
             this.DriverBox.Name = "DriverBox";
             this.DriverBox.Size = new System.Drawing.Size(392, 35);
             this.DriverBox.TabIndex = 10;
+            this.DriverBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DriverBox_HelpRequested);
             // 
             // DriverCheck
             // 
             this.DriverCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.DriverCheck.AutoSize = true;
             this.DriverCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DriverCheck.Location = new System.Drawing.Point(12, 360);
+            this.DriverCheck.Location = new System.Drawing.Point(12, 366);
             this.DriverCheck.Name = "DriverCheck";
             this.DriverCheck.Size = new System.Drawing.Size(128, 39);
             this.DriverCheck.TabIndex = 9;
@@ -328,18 +320,19 @@
             this.NumberBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.NumberBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NumberBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberBox.Location = new System.Drawing.Point(147, 436);
+            this.NumberBox.Location = new System.Drawing.Point(147, 421);
             this.NumberBox.MaxLength = 8;
             this.NumberBox.Name = "NumberBox";
             this.NumberBox.Size = new System.Drawing.Size(392, 35);
             this.NumberBox.TabIndex = 12;
+            this.NumberBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.NumberBox_HelpRequested);
             // 
             // NumberCheck
             // 
             this.NumberCheck.Appearance = System.Windows.Forms.Appearance.Button;
             this.NumberCheck.AutoSize = true;
             this.NumberCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberCheck.Location = new System.Drawing.Point(12, 433);
+            this.NumberCheck.Location = new System.Drawing.Point(12, 418);
             this.NumberCheck.Name = "NumberCheck";
             this.NumberCheck.Size = new System.Drawing.Size(128, 39);
             this.NumberCheck.TabIndex = 11;
@@ -395,7 +388,53 @@
             this.SearchButton.TabIndex = 16;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             this.SearchButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.SearchButton_HelpRequested);
+            // 
+            // ClassBox
+            // 
+            this.ClassBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "Econom",
+            "Standart",
+            "Business",
+            "Premium"});
+            this.ClassBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ClassBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.ClassBox.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.ClassBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassBox.Location = new System.Drawing.Point(147, 314);
+            this.ClassBox.MaxLength = 10;
+            this.ClassBox.Name = "ClassBox";
+            this.ClassBox.Size = new System.Drawing.Size(392, 35);
+            this.ClassBox.TabIndex = 18;
+            this.ClassBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ClassBox_HelpRequested);
+            // 
+            // ClassCheck
+            // 
+            this.ClassCheck.Appearance = System.Windows.Forms.Appearance.Button;
+            this.ClassCheck.AutoSize = true;
+            this.ClassCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassCheck.Location = new System.Drawing.Point(12, 311);
+            this.ClassCheck.Name = "ClassCheck";
+            this.ClassCheck.Size = new System.Drawing.Size(128, 39);
+            this.ClassCheck.TabIndex = 17;
+            this.ClassCheck.Text = " Class:";
+            this.ClassCheck.UseVisualStyleBackColor = true;
+            this.ClassCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ClassCheck_HelpRequested);
+            // 
+            // ResultsBox
+            // 
+            this.ResultsBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ResultsBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ResultsBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultsBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.ResultsBox.Location = new System.Drawing.Point(546, 12);
+            this.ResultsBox.Name = "ResultsBox";
+            this.ResultsBox.ReadOnly = true;
+            this.ResultsBox.Size = new System.Drawing.Size(425, 668);
+            this.ResultsBox.TabIndex = 19;
+            this.ResultsBox.Text = "";
+            this.ResultsBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ResultsBox_HelpRequested);
             // 
             // TaxiFinder
             // 
@@ -405,6 +444,9 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(981, 753);
+            this.Controls.Add(this.ResultsBox);
+            this.Controls.Add(this.ClassBox);
+            this.Controls.Add(this.ClassCheck);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.LinqButton);
             this.Controls.Add(this.SaxButton);
@@ -421,7 +463,6 @@
             this.Controls.Add(this.BrandCheck);
             this.Controls.Add(this.ConvertToHTMLButton);
             this.Controls.Add(this.ClearButton);
-            this.Controls.Add(this.ResultsBox);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("SF Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -439,8 +480,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox ResultsBox;
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button ConvertToHTMLButton;
         private System.Windows.Forms.CheckBox BrandCheck;
@@ -457,6 +496,9 @@
         private System.Windows.Forms.RadioButton SaxButton;
         private System.Windows.Forms.RadioButton LinqButton;
         private System.Windows.Forms.Button SearchButton;
+        private System.Windows.Forms.TextBox ClassBox;
+        private System.Windows.Forms.CheckBox ClassCheck;
+        private System.Windows.Forms.RichTextBox ResultsBox;
     }
 }
 

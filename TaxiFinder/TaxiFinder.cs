@@ -9,11 +9,11 @@ namespace TaxiFinder
         public TaxiFinder()
         {
             InitializeComponent();
-            var a = FilesProvider.GetInstance.FilesPaths;
-            var b = FilesProvider.GetInstance.FilesNames;
+        }
 
-            ResultsBox.Text = "Alexander Danylchenko";
-            return;
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
@@ -41,11 +41,6 @@ namespace TaxiFinder
 
         }
 
-        private void ResultsBox_HelpRequested(object sender, HelpEventArgs hlpevent)
-        {
-            MessageBox.Show("This field can output results of searching through XML files.",
-                "ResultBox help", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
         private void BrandCheck_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
@@ -63,6 +58,12 @@ namespace TaxiFinder
         {
             MessageBox.Show("Color search filter. Click on label to activate it.",
                 "ColorCheck help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ClassCheck_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("Class search filter. Click on label to activate it.",
+                "ClassCheck help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void DriverCheck_HelpRequested(object sender, HelpEventArgs hlpevent)
@@ -111,6 +112,48 @@ namespace TaxiFinder
         {
             MessageBox.Show("Click on label to create HTML file from results of searches",
                 "HTML convert help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BrandBox_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("Type the brand of desired car to create filter",
+                "BrandBox help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ModelBox_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("Type the model of desired car to create filter",
+                "ModelBox help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ColorBox_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("Type the color of desired car to create filter",
+                "ColorBox help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ClassBox_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("Type the class of desired car to create filter",
+                "ClassBox help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void DriverBox_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("Type the driver full name of desired car to create filter",
+                "DriverBox help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void NumberBox_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("Type the plate number of desired car to create filter",
+                "NumberBox help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ResultsBox_HelpRequested(object sender, HelpEventArgs hlpevent)
+        {
+            MessageBox.Show("This field can output results of searching through XML files.",
+                "ResultBox help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

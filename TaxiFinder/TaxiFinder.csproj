@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FilesParser.cs" />
+    <Compile Include="SearchEngines.cs" />
     <Compile Include="Taxi.cs" />
     <Compile Include="TaxiFinder.cs">
       <SubType>Form</SubType>
