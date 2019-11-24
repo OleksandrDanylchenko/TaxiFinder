@@ -1,6 +1,6 @@
 ﻿namespace TaxiFinder
 {
-    partial class TaxiFinder
+    partial class TaxiFinderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaxiFinder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaxiFinderForm));
             this.ClearButton = new System.Windows.Forms.Button();
             this.ConvertToHTMLButton = new System.Windows.Forms.Button();
             this.BrandCheck = new System.Windows.Forms.CheckBox();
@@ -481,24 +481,24 @@
 
         #endregion
         private System.Windows.Forms.Button ClearButton;
-        private System.Windows.Forms.Button ConvertToHTMLButton;
-        private System.Windows.Forms.CheckBox BrandCheck;
-        private System.Windows.Forms.TextBox ModelBox;
-        private System.Windows.Forms.CheckBox ModelCheck;
-        private System.Windows.Forms.TextBox ColorBox;
-        private System.Windows.Forms.CheckBox ColorCheck;
-        private System.Windows.Forms.TextBox DriverBox;
-        private System.Windows.Forms.CheckBox DriverCheck;
-        private System.Windows.Forms.TextBox NumberBox;
-        private System.Windows.Forms.CheckBox NumberCheck;
+        internal System.Windows.Forms.Button ConvertToHTMLButton;
+        internal System.Windows.Forms.CheckBox BrandCheck;
+        internal System.Windows.Forms.TextBox ModelBox;
+        internal System.Windows.Forms.CheckBox ModelCheck;
+        internal System.Windows.Forms.TextBox ColorBox;
+        internal System.Windows.Forms.CheckBox ColorCheck;
+        internal System.Windows.Forms.TextBox DriverBox;
+        internal System.Windows.Forms.CheckBox DriverCheck;
+        internal System.Windows.Forms.TextBox NumberBox;
+        internal System.Windows.Forms.CheckBox NumberCheck;
         internal System.Windows.Forms.TextBox BrandBox;
-        private System.Windows.Forms.RadioButton DomButton;
-        private System.Windows.Forms.RadioButton SaxButton;
-        private System.Windows.Forms.RadioButton LinqButton;
-        private System.Windows.Forms.Button SearchButton;
-        private System.Windows.Forms.TextBox ClassBox;
-        private System.Windows.Forms.CheckBox ClassCheck;
-        private System.Windows.Forms.RichTextBox ResultsBox;
+        internal System.Windows.Forms.RadioButton DomButton;
+        internal System.Windows.Forms.RadioButton SaxButton;
+        internal System.Windows.Forms.RadioButton LinqButton;
+        internal System.Windows.Forms.Button SearchButton;
+        internal System.Windows.Forms.TextBox ClassBox;
+        internal System.Windows.Forms.CheckBox ClassCheck;
+        internal System.Windows.Forms.RichTextBox ResultsBox;
     }
 }
 

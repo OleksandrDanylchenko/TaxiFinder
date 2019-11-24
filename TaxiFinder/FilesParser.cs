@@ -15,19 +15,19 @@ namespace TaxiFinder
                                                    (_instance = new FilesProvider()
                                                    {
                                                        FilesPaths = GetFilesPaths(),
-                                                       FilesNames = GetFilesNames()
+                                                       ServicesNames = GetServicesNames()
                                                    });
 
         public string[] FilesPaths { get; private set; }
-        public string[] FilesNames { get; private set; }
+        public string[] ServicesNames { get; private set; }
 
         private static string[] GetFilesPaths()
         {
             string exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string dataPath = GetDataPath(exePath);
 
-            string[] filePaths = Directory.GetFiles(dataPath, "*.xml", SearchOption.TopDirectoryOnly);
-            return filePaths;
+            string[] filesPaths = Directory.GetFiles(dataPath, "*.xml", SearchOption.TopDirectoryOnly);
+            return filesPaths;
         }
 
         private static string GetDataPath(string exePath)
@@ -39,7 +39,7 @@ namespace TaxiFinder
             }
             catch (ArgumentNullException ane)
             {
-                MessageBox.Show(ane.Message, ".exe path error",
+                MessageBox.Show(ane.Message, ".exe path null error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
@@ -47,7 +47,7 @@ namespace TaxiFinder
             return dataPath;
         }
 
-        private static string[] GetFilesNames()
+        private static string[] GetServicesNames()
         {
             string[] fileNames = GetFilesPaths()
                 .Select(Path.GetFileNameWithoutExtension)

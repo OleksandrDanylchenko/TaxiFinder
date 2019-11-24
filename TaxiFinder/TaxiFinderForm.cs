@@ -1,38 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace TaxiFinder
 {
-    public partial class TaxiFinder : Form
+    public partial class TaxiFinderForm : Form
     {
 
-        public TaxiFinder()
+        public TaxiFinderForm()
         {
             InitializeComponent();
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-
+            List<(string service, List<Taxi> foundedTaxis)> results = Searcher.ExecuteSearch(this);
+            //TODO PRINT ON RESULTS BOX
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            BrandCheck.Checked = false;
-            BrandBox.Text = string.Empty;
-
-            ModelCheck.Checked = false;
-            ModelBox.Text = string.Empty;
-
-            ColorCheck.Checked = false;
-            ColorBox.Text = string.Empty;
-
-            DriverCheck.Checked = false;
-            DriverBox.Text = string.Empty;
-
-            NumberCheck.Checked = false;
-            NumberBox.Text = string.Empty;
-
             ResultsBox.Text = string.Empty;
         }
 
@@ -104,7 +91,7 @@ namespace TaxiFinder
 
         private void ClearButton_HelpRequested(object sender, HelpEventArgs hlpevent)
         {
-            MessageBox.Show("Click on label to restore default state of all controls",
+            MessageBox.Show("Click on label to clear results box",
                 "Clear help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

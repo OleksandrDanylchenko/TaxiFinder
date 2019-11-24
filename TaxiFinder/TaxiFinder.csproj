@@ -50,13 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FilesParser.cs" />
+    <Compile Include="Searcher.cs" />
     <Compile Include="SearchEngines.cs" />
     <Compile Include="Taxi.cs" />
-    <Compile Include="TaxiFinder.cs">
+    <Compile Include="TaxiFinderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TaxiFinder.Designer.cs">
-      <DependentUpon>TaxiFinder.cs</DependentUpon>
+    <Compile Include="TaxiFinderForm.Designer.cs">
+      <DependentUpon>TaxiFinderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,8 +71,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TaxiFinder.resx">
-      <DependentUpon>TaxiFinder.cs</DependentUpon>
+    <EmbeddedResource Include="TaxiFinderForm.resx">
+      <DependentUpon>TaxiFinderForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
