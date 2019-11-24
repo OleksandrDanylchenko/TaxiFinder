@@ -15,6 +15,7 @@ namespace TaxiFinder
         private void SearchButton_Click(object sender, EventArgs e)
         {
             List<(string service, List<Taxi> foundedTaxis)> results = Searcher.ExecuteSearch(this);
+            return;
             //TODO PRINT ON RESULTS BOX
         }
 
