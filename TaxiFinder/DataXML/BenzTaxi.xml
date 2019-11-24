@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<taxies>
+<taxis>
   <taxi>
     <brand>Mercedes</brand>
     <model>AMG E43 4MATIC</model>
@@ -40,4 +40,4 @@
     <driver>Сhernukha Andrey</driver>
     <number>AA3333PL</number>
   </taxi>
-</taxies>
+</taxis>

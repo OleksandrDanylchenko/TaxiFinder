@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<taxies>
+<taxis>
   <taxi>
     <brand>Renault</brand>
     <model>Logan</model>
@@ -40,4 +40,4 @@
     <driver>Averin Alexander</driver>
     <number>AA3278FO</number>
   </taxi>
-</taxies>
+</taxis>

@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace TaxiFinder
 {
@@ -82,7 +83,7 @@ namespace TaxiFinder
                         {
                             color = element.InnerText;
                         }
-                        
+
                         if ((element.Name == "class" && element.InnerText == desiredTaxi.Class) ||
                             desiredTaxi.Class == string.Empty)
                         {
@@ -119,7 +120,7 @@ namespace TaxiFinder
     internal class EngineSAX : ISearchEngineStrategy
     {
         public List<Taxi> DoSearchInFile(string filePath, Taxi desiredTaxi)
-        { 
+        {
             List<Taxi> foundedTaxis = new List<Taxi>();
 
             using (XmlReader xr = XmlReader.Create(filePath))
@@ -138,7 +139,7 @@ namespace TaxiFinder
                     // Reads the element
                     if (xr.NodeType == XmlNodeType.Element)
                     {
-                        element = xr.Name; // the name of the current element
+                        element = xr.Name; // The name of the current element
                     }
                     // Reads the element value
                     else if (xr.NodeType == XmlNodeType.Text)
@@ -160,7 +161,7 @@ namespace TaxiFinder
                         {
                             color = xr.Value;
                         }
-                        
+
                         if ((element == "class" && xr.Value == desiredTaxi.Class) ||
                             desiredTaxi.Class == string.Empty)
                         {
@@ -201,7 +202,36 @@ namespace TaxiFinder
     {
         public List<Taxi> DoSearchInFile(string filePath, Taxi desiredTaxi)
         {
-            throw new NotImplementedException();
+            List<Taxi> foundedTaxis = new List<Taxi>();
+            
+            XDocument xdoc = XDocument.Load(filePath);
+            var foundedElements = from elem in xdoc.Element("taxis")?.Elements("taxi")
+                where 
+                (
+                (elem.Element("brand")?.Value.ToString() == desiredTaxi.Brand || desiredTaxi.Brand == string.Empty) && 
+                (elem.Element("model")?.Value.ToString() == desiredTaxi.Model || desiredTaxi.Model == string.Empty) &&
+                (elem.Element("color")?.Value.ToString() == desiredTaxi.Color || desiredTaxi.Color == string.Empty) &&
+                (elem.Element("class")?.Value.ToString() == desiredTaxi.Class || desiredTaxi.Class == string.Empty) &&
+                (elem.Element("driver")?.Value.ToString() == desiredTaxi.Driver || desiredTaxi.Driver == string.Empty) &&
+                (elem.Element("number")?.Value.ToString() == desiredTaxi.Number || desiredTaxi.Number == string.Empty)
+                ) 
+                select new
+                {
+                    brand = elem.Element("brand")?.ToString(),
+                    model = elem.Element("model")?.ToString(),
+                    color = elem.Element("color")?.ToString(),
+                    @class = elem.Element("class")?.ToString(),
+                    driver = elem.Element("driver")?.ToString(),
+                    number = elem.Element("number")?.ToString()
+                };
+            
+            foreach (var fe in foundedElements)
+            {
+                Taxi foundedTaxi = new Taxi(fe.brand, fe.model, fe.color, fe.@class, fe.driver, fe.number);
+                foundedTaxis.Add(foundedTaxi);
+            }
+
+            return foundedTaxis;
         }
     }
 }
