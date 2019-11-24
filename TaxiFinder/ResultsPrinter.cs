@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace TaxiFinder
@@ -12,10 +8,10 @@ namespace TaxiFinder
         public static void Print(List<(string service, List<Taxi> foundedTaxis)> results, RichTextBox resultsBox)
         {
             resultsBox.Text = string.Empty;
-            foreach (var result in results)
+            foreach (var (service, foundedTaxis) in results)
             {
-                resultsBox.AppendText($"{result.service}:\n");
-                foreach (var taxi in result.foundedTaxis)
+                resultsBox.AppendText($"{service}:\n");
+                foreach (var taxi in foundedTaxis)
                 {
                     string taxiOutput = $"Brand: {taxi.Brand}\n" +
                                         $"Model: {taxi.Model}\n" +

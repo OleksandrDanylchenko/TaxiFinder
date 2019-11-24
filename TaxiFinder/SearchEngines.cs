@@ -28,7 +28,8 @@ namespace TaxiFinder
             for (int i = 0; i < filesPaths.Length; ++i)
             {
                 string serviceName = servicesNames[i];
-                List<Taxi> foundedTaxisInService = _engine.DoSearchInFile(filesPaths[i], _desiredTaxi);
+                string filePath = filesPaths[i];
+                List<Taxi> foundedTaxisInService = _engine.DoSearchInFile(filePath, _desiredTaxi);
 
                 results.Add((serviceName, foundedTaxisInService));
             }
@@ -58,6 +59,7 @@ namespace TaxiFinder
             XmlDocument xDoc = new XmlDocument();
             xDoc.Load(filePath);
             XmlElement xRoot = xDoc.DocumentElement;
+
             XmlNodeList taxiNodes = xRoot?.SelectNodes("taxi");
             if (taxiNodes != null)
             {
@@ -73,36 +75,42 @@ namespace TaxiFinder
                     foreach (XmlElement element in taxi)
                     {
                         if (element.Name == "brand" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Brand) ||
-                            desiredTaxi.Brand == string.Empty))
+                                                        desiredTaxi.Brand == string.Empty))
                         {
                             brand = element.InnerText;
                         }
+
                         else if (element.Name == "model" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Model) ||
-                            desiredTaxi.Model == string.Empty))
+                                                             desiredTaxi.Model == string.Empty))
                         {
                             model = element.InnerText;
                         }
+
                         else if (element.Name == "color" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Color) ||
-                            desiredTaxi.Color == string.Empty))
+                                                             desiredTaxi.Color == string.Empty))
                         {
                             color = element.InnerText;
                         }
+
                         else if (element.Name == "class" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Class) ||
-                            desiredTaxi.Class == string.Empty))
+                                                             desiredTaxi.Class == string.Empty))
                         {
                             @class = element.InnerText;
                         }
+
                         else if (element.Name == "driver" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Driver) ||
-                            desiredTaxi.Driver == string.Empty))
+                                                              desiredTaxi.Driver == string.Empty))
                         {
                             driver = element.InnerText;
                         }
+
                         else if (element.Name == "number" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Number) ||
-                            desiredTaxi.Number == string.Empty))
+                                                              desiredTaxi.Number == string.Empty))
                         {
                             number = element.InnerText;
                         }
                     }
+
                     if (brand != string.Empty && model != string.Empty && color != string.Empty &&
                         @class != string.Empty && driver != string.Empty && number != string.Empty)
                     {
@@ -141,40 +149,47 @@ namespace TaxiFinder
                     {
                         element = xr.Name; // The name of the current element
                     }
+
                     // Reads the element value
                     else if (xr.NodeType == XmlNodeType.Text)
                     {
                         if (element == "brand" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Brand) ||
-                            desiredTaxi.Brand == string.Empty))
+                                                   desiredTaxi.Brand == string.Empty))
                         {
                             brand = xr.Value;
                         }
+
                         else if (element == "model" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Model) ||
-                            desiredTaxi.Model == string.Empty))
+                                                        desiredTaxi.Model == string.Empty))
                         {
                             model = xr.Value;
                         }
+
                         else if (element == "color" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Color) ||
-                            desiredTaxi.Color == string.Empty))
+                                                        desiredTaxi.Color == string.Empty))
                         {
                             color = xr.Value;
                         }
+
                         else if (element == "class" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Class) ||
-                            desiredTaxi.Class == string.Empty))
+                                                        desiredTaxi.Class == string.Empty))
                         {
                             @class = xr.Value;
                         }
+
                         else if (element == "driver" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Driver) ||
-                            desiredTaxi.Driver == string.Empty))
+                                                         desiredTaxi.Driver == string.Empty))
                         {
                             driver = xr.Value;
                         }
+
                         else if (element == "number" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Number) ||
-                            desiredTaxi.Number == string.Empty))
+                                                         desiredTaxi.Number == string.Empty))
                         {
                             number = xr.Value;
                         }
                     }
+
                     // Reads the closing element
                     else if ((xr.NodeType == XmlNodeType.EndElement) && (xr.Name == "taxi"))
                     {
@@ -200,33 +215,34 @@ namespace TaxiFinder
         public List<Taxi> DoSearchInFile(string filePath, Taxi desiredTaxi)
         {
             List<Taxi> foundedTaxis = new List<Taxi>();
-            
+
             XDocument xdoc = XDocument.Load(filePath);
             var foundedElements = from elem in xdoc.Element("taxis")?.Elements("taxi")
-                where 
-                (
-                (SearchEngine.IsEqual(elem.Element("brand")?.Value.ToString(), desiredTaxi.Brand) || 
-                 desiredTaxi.Brand == string.Empty) && 
-                (SearchEngine.IsEqual(elem.Element("model")?.Value.ToString(), desiredTaxi.Model) || 
-                 desiredTaxi.Model == string.Empty) &&
-                (SearchEngine.IsEqual(elem.Element("color")?.Value.ToString(), desiredTaxi.Color) || 
-                 desiredTaxi.Color == string.Empty) &&
-                (SearchEngine.IsEqual(elem.Element("class")?.Value.ToString(), desiredTaxi.Class) || 
-                 desiredTaxi.Class == string.Empty) &&
-                (SearchEngine.IsEqual(elem.Element("driver")?.Value.ToString(), desiredTaxi.Driver) || 
-                 desiredTaxi.Driver == string.Empty) &&
-                (SearchEngine.IsEqual(elem.Element("number")?.Value.ToString(), desiredTaxi.Number) || 
-                 desiredTaxi.Number == string.Empty)
-                ) 
-                select new
-                {
-                    brand = elem.Element("brand")?.Value.ToString(),
-                    model = elem.Element("model")?.Value.ToString(),
-                    color = elem.Element("color")?.Value.ToString(),
-                    @class = elem.Element("class")?.Value.ToString(),
-                    driver = elem.Element("driver")?.Value.ToString(),
-                    number = elem.Element("number")?.Value.ToString()
-                };
+                                  where
+                                  (
+                                  (SearchEngine.IsEqual(elem.Element("brand")?.Value.ToString(), desiredTaxi.Brand) ||
+                                   desiredTaxi.Brand == string.Empty) &&
+                                  (SearchEngine.IsEqual(elem.Element("model")?.Value.ToString(), desiredTaxi.Model) ||
+                                   desiredTaxi.Model == string.Empty) &&
+                                  (SearchEngine.IsEqual(elem.Element("color")?.Value.ToString(), desiredTaxi.Color) ||
+                                   desiredTaxi.Color == string.Empty) &&
+                                  (SearchEngine.IsEqual(elem.Element("class")?.Value.ToString(), desiredTaxi.Class) ||
+                                   desiredTaxi.Class == string.Empty) &&
+                                  (SearchEngine.IsEqual(elem.Element("driver")?.Value.ToString(), desiredTaxi.Driver) ||
+                                   desiredTaxi.Driver == string.Empty) &&
+                                  (SearchEngine.IsEqual(elem.Element("number")?.Value.ToString(), desiredTaxi.Number) ||
+                                   desiredTaxi.Number == string.Empty)
+                                  )
+                                  select new
+                                  {
+                                      brand = elem.Element("brand")?.Value.ToString(),
+                                      model = elem.Element("model")?.Value.ToString(),
+                                      color = elem.Element("color")?.Value.ToString(),
+                                      @class = elem.Element("class")?.Value.ToString(),
+                                      driver = elem.Element("driver")?.Value.ToString(),
+                                      number = elem.Element("number")?.Value.ToString()
+                                  };
+
             foreach (var fe in foundedElements)
             {
                 Taxi foundedTaxi = new Taxi(fe.brand, fe.model, fe.color, fe.@class, fe.driver, fe.number);
