@@ -2,26 +2,21 @@
 {
     internal class Taxi
     {
-        public Taxi()
-        {
-            Brand = Model = Color = Driver = Number = string.Empty;
-        }
-
-        public Taxi(string brand, string model, string color, string Class, string driver, string number)
+        public Taxi(string brand, string model, string color, string @class, string driver, string number)
         {
             Brand = brand;
             Model = model;
             Color = color;
-            this.Class = Class;
+            Class = @class;
             Driver = driver;
             Number = number;
         }
 
-        public string Brand { get; set; }
-        public string Model { get; set; }
-        public string Color { get; set; }
-        public string Class { get; set; }
-        public string Driver { get; set; }
-        public string Number { get; set; }
+        public string Brand { get; }
+        public string Model { get; }
+        public string Color { get; }
+        public string Class { get; }
+        public string Driver { get; }
+        public string Number { get; }
     }
 }

@@ -59,7 +59,7 @@ namespace TaxiFinder
                     string brand = string.Empty;
                     string model = string.Empty;
                     string color = string.Empty;
-                    string Class = string.Empty;
+                    string @class = string.Empty;
                     string driver = string.Empty;
                     string number = string.Empty;
 
@@ -86,7 +86,7 @@ namespace TaxiFinder
                         if ((element.Name == "class" && element.InnerText == desiredTaxi.Class) ||
                             desiredTaxi.Class == string.Empty)
                         {
-                            Class = element.InnerText;
+                            @class = element.InnerText;
                         }
 
                         if ((element.Name == "driver" && element.InnerText == desiredTaxi.Driver) ||
@@ -103,9 +103,9 @@ namespace TaxiFinder
                     }
 
                     if (brand != string.Empty && model != string.Empty && color != string.Empty &&
-                        Class != string.Empty && driver != string.Empty && number != string.Empty)
+                        @class != string.Empty && driver != string.Empty && number != string.Empty)
                     {
-                        Taxi foundedTaxi = new Taxi(brand, model, color, Class, driver, number);
+                        Taxi foundedTaxi = new Taxi(brand, model, color, @class, driver, number);
                         foundedTaxis.Add(foundedTaxi);
                     }
                 }
@@ -119,8 +119,80 @@ namespace TaxiFinder
     internal class EngineSAX : ISearchEngineStrategy
     {
         public List<Taxi> DoSearchInFile(string filePath, Taxi desiredTaxi)
-        {
-            throw new NotImplementedException();
+        { 
+            List<Taxi> foundedTaxis = new List<Taxi>();
+
+            using (XmlReader xr = XmlReader.Create(filePath))
+            {
+                string brand = string.Empty;
+                string model = string.Empty;
+                string color = string.Empty;
+                string @class = string.Empty;
+                string driver = string.Empty;
+                string number = string.Empty;
+
+                string element = string.Empty;
+
+                while (xr.Read())
+                {
+                    // Reads the element
+                    if (xr.NodeType == XmlNodeType.Element)
+                    {
+                        element = xr.Name; // the name of the current element
+                    }
+                    // Reads the element value
+                    else if (xr.NodeType == XmlNodeType.Text)
+                    {
+                        if ((element == "brand" && xr.Value == desiredTaxi.Brand) ||
+                            desiredTaxi.Brand == string.Empty)
+                        {
+                            brand = xr.Value;
+                        }
+
+                        if ((element == "model" && xr.Value == desiredTaxi.Model) ||
+                            desiredTaxi.Model == string.Empty)
+                        {
+                            model = xr.Value;
+                        }
+
+                        if ((element == "color" && xr.Value == desiredTaxi.Color) ||
+                            desiredTaxi.Color == string.Empty)
+                        {
+                            color = xr.Value;
+                        }
+                        
+                        if ((element == "class" && xr.Value == desiredTaxi.Class) ||
+                            desiredTaxi.Class == string.Empty)
+                        {
+                            @class = xr.Value;
+                        }
+
+                        if ((element == "driver" && xr.Value == desiredTaxi.Driver) ||
+                            desiredTaxi.Driver == string.Empty)
+                        {
+                            driver = xr.Value;
+                        }
+
+                        if ((element == "number" && xr.Value == desiredTaxi.Number) ||
+                            desiredTaxi.Number == string.Empty)
+                        {
+                            number = xr.Value;
+                        }
+                    }
+                    // Reads the closing element
+                    else if ((xr.NodeType == XmlNodeType.EndElement) && (xr.Name == "taxi"))
+                    {
+                        if (brand != string.Empty && model != string.Empty && color != string.Empty &&
+                            @class != string.Empty && driver != string.Empty && number != string.Empty)
+                        {
+                            Taxi foundedTaxi = new Taxi(brand, model, color, @class, driver, number);
+                            foundedTaxis.Add(foundedTaxi);
+                        }
+                    }
+                }
+            }
+
+            return foundedTaxis;
         }
     }
 

@@ -7,9 +7,8 @@ namespace TaxiFinder
         public static List<(string service, List<Taxi> foundedTaxis)> ExecuteSearch(TaxiFinderForm form)
         {
             Taxi desiredTaxi = CreateSearchRequest(form);
-
             ISearchEngineStrategy engineStrategy = GetSearchEngine(form);
-            if (engineStrategy == null)
+            if (desiredTaxi == null || engineStrategy == null)
             {
                 return new List<(string, List<Taxi>)>();
             }
@@ -22,39 +21,50 @@ namespace TaxiFinder
 
         private static Taxi CreateSearchRequest(TaxiFinderForm form)
         {
-            Taxi desiredTaxi = new Taxi();
+            string brand = string.Empty;
+            string model = string.Empty;
+            string color = string.Empty;
+            string @class = string.Empty;
+            string driver = string.Empty;
+            string number = string.Empty;
 
             if (form.BrandCheck.Checked)
             {
-                desiredTaxi.Brand = form.BrandBox.Text;
+                brand = form.BrandBox.Text;
             }
 
             if (form.ModelCheck.Checked)
             {
-                desiredTaxi.Model = form.ModelBox.Text;
+                model = form.ModelBox.Text;
             }
 
             if (form.ColorCheck.Checked)
             {
-                desiredTaxi.Color = form.ColorBox.Text;
+                color = form.ColorBox.Text;
             }
 
             if (form.ClassCheck.Checked)
             {
-                desiredTaxi.Class = form.ClassBox.Text;
+                @class = form.ClassBox.Text;
             }
 
             if (form.DriverCheck.Checked)
             {
-                desiredTaxi.Driver = form.DriverBox.Text;
+                driver = form.DriverBox.Text;
             }
 
             if (form.NumberCheck.Checked)
             {
-                desiredTaxi.Number = form.NumberBox.Text;
+                number = form.NumberBox.Text;
             }
 
-            return desiredTaxi;
+            if (brand == string.Empty && model == string.Empty && color == string.Empty &&
+                @class == string.Empty && driver == string.Empty && number == string.Empty)
+            {
+                return null;
+            }
+
+            return new Taxi(brand, model, color, @class, driver, number);
         }
 
         private static ISearchEngineStrategy GetSearchEngine(TaxiFinderForm form)
