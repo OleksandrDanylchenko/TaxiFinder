@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
@@ -35,11 +34,6 @@ namespace TaxiFinder
             }
 
             return results;
-        }
-
-        public static bool IsEqual(string firstStr, string secondStr)
-        {
-            return firstStr.Equals(secondStr, StringComparison.CurrentCultureIgnoreCase);
         }
     }
 

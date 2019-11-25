@@ -13,13 +13,13 @@ namespace TaxiFinder
                 resultsBox.AppendText($"{service}:\n");
                 foreach (var taxi in foundedTaxis)
                 {
-                    string taxiOutput = $"Brand: {taxi.Brand}\n" +
-                                        $"Model: {taxi.Model}\n" +
-                                        $"Color: {taxi.Color}\n" +
-                                        $"Class {taxi.Class}\n" +
-                                        $"Driver {taxi.Driver}\n" +
-                                        $"Number {taxi.Number}\n" +
-                                        "--------------\n";
+                    var taxiOutput = $"Brand: {taxi.Brand}\n" +
+                                     $"Model: {taxi.Model}\n" +
+                                     $"Color: {taxi.Color}\n" + 
+                                     $"Class {taxi.Class}\n" +
+                                     $"Driver {taxi.Driver}\n" +
+                                     $"Number {taxi.Number}\n" +
+                                     "---------------\n";
                     resultsBox.AppendText(taxiOutput);
                 }
             }

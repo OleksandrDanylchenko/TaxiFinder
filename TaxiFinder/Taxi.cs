@@ -1,4 +1,6 @@
-﻿namespace TaxiFinder
+﻿using System;
+
+namespace TaxiFinder
 {
     internal class Taxi
     {
