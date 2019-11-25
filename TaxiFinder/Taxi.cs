@@ -5,7 +5,11 @@ namespace TaxiFinder
     [Serializable]
     public class Taxi
     {
-        public Taxi() { }
+        public Taxi()
+        {
+            Brand = Model = Color = Class = Driver = Number = string.Empty;
+        }
+
         public Taxi(string brand, string model, string color, string @class, string driver, string number)
         {
             Brand = brand;
@@ -24,15 +28,16 @@ namespace TaxiFinder
         public string Driver { get; set; }
         public string Number { get; set; }
 
-        public void BlankAllField()
-        {
-            Brand = Model = Color = Class = Driver = Number = string.Empty;
-        }
-
-        public bool IsAllFieldsInitialized()
+        public bool IsFieldsInitialized()
         {
             return Brand != string.Empty && Model != string.Empty && Color != string.Empty &&
                    Class != string.Empty && Driver != string.Empty && Number != string.Empty;
+        }
+
+        public bool IsFieldsBlank()
+        {
+            return Brand == string.Empty && Model == string.Empty && Color == string.Empty &&
+                   Class == string.Empty && Driver == string.Empty && Number == string.Empty;
         }
     }
 }

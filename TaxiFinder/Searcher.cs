@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace TaxiFinder
 {
@@ -14,9 +16,18 @@ namespace TaxiFinder
             }
 
             SearchEngine executiveEngine = new SearchEngine(desiredTaxi, engineStrategy);
-            List<(string, List<Taxi>)> results = executiveEngine.ScanAllFiles();
 
-            return results;
+            try
+            {
+                List<(string, List<Taxi>)> results = executiveEngine.ScanAllFiles();
+                return results;
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Error occurred while reading an input XML file",
+                    "XML file error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<(string, List<Taxi>)>();
+            }
         }
 
         private static Taxi CreateSearchRequest(TaxiFinderForm form)
@@ -53,12 +64,7 @@ namespace TaxiFinder
                 desiredTaxi.Number = form.NumberBox.Text;
             }
 
-            if (desiredTaxi.IsAllFieldsInitialized())
-            {
-                return null;
-            }
-
-            return desiredTaxi;
+            return desiredTaxi.IsFieldsBlank() ? null : desiredTaxi;
         }
 
         private static ISearchEngineStrategy GetSearchEngine(TaxiFinderForm form)
