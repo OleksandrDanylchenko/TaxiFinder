@@ -5,7 +5,8 @@ namespace TaxiFinder
 {
     internal static class ResultsPrinter
     {
-        public static void Print(List<(string service, List<Taxi> foundedTaxis)> results, RichTextBox resultsBox)
+        public static void Print(List<(string service, List<Taxi> foundedTaxis)> results,
+                                 RichTextBox resultsBox)
         {
             resultsBox.Text = string.Empty;
             foreach (var (service, foundedTaxis) in results)

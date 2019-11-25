@@ -6,7 +6,7 @@ namespace TaxiFinder
 {
     public partial class TaxiFinderForm : Form
     {
-        List<(string service, List<Taxi> foundedTaxis)> results = new List<(string, List<Taxi>)>();
+        private List<(string service, List<Taxi> foundedTaxis)> _results = new List<(string, List<Taxi>)>();
 
         public TaxiFinderForm()
         {
@@ -15,8 +15,8 @@ namespace TaxiFinder
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            results = Searcher.ExecuteSearch(this);
-            ResultsPrinter.Print(results, ResultsBox);
+            _results = Searcher.ExecuteSearch(this);
+            ResultsPrinter.Print(_results, ResultsBox);
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
@@ -26,7 +26,11 @@ namespace TaxiFinder
 
         private void ConvertToHTMLButton_Click(object sender, EventArgs e)
         {
-
+            if (HTMLSaveDialog.ShowDialog().Equals(DialogResult.OK))
+            {
+                HTMLConverter converter = new HTMLConverter(_results, HTMLSaveDialog);
+                converter.Convert();
+            }
         }
 
 

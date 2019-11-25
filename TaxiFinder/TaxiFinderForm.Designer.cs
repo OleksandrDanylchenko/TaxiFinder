@@ -48,6 +48,7 @@
             this.ClassBox = new System.Windows.Forms.TextBox();
             this.ClassCheck = new System.Windows.Forms.CheckBox();
             this.ResultsBox = new System.Windows.Forms.RichTextBox();
+            this.HTMLSaveDialog = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // ClearButton
@@ -436,6 +437,12 @@
             this.ResultsBox.Text = "";
             this.ResultsBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ResultsBox_HelpRequested);
             // 
+            // HTMLSaveDialog
+            // 
+            this.HTMLSaveDialog.FileName = "ResultHTML";
+            this.HTMLSaveDialog.Filter = "HTML File(*.html) | *.html";
+            this.HTMLSaveDialog.Title = "Choose saving location:";
+            // 
             // TaxiFinderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -499,6 +506,7 @@
         internal System.Windows.Forms.TextBox ClassBox;
         internal System.Windows.Forms.CheckBox ClassCheck;
         internal System.Windows.Forms.RichTextBox ResultsBox;
+        public System.Windows.Forms.SaveFileDialog HTMLSaveDialog;
     }
 }
 

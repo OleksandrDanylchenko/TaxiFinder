@@ -21,50 +21,44 @@ namespace TaxiFinder
 
         private static Taxi CreateSearchRequest(TaxiFinderForm form)
         {
-            string brand = string.Empty;
-            string model = string.Empty;
-            string color = string.Empty;
-            string @class = string.Empty;
-            string driver = string.Empty;
-            string number = string.Empty;
+            Taxi desiredTaxi = new Taxi();
 
             if (form.BrandCheck.Checked)
             {
-                brand = form.BrandBox.Text;
+                desiredTaxi.Brand = form.BrandBox.Text;
             }
 
             if (form.ModelCheck.Checked)
             {
-                model = form.ModelBox.Text;
+                desiredTaxi.Model = form.ModelBox.Text;
             }
 
             if (form.ColorCheck.Checked)
             {
-                color = form.ColorBox.Text;
+                desiredTaxi.Color = form.ColorBox.Text;
             }
 
             if (form.ClassCheck.Checked)
             {
-                @class = form.ClassBox.Text;
+                desiredTaxi.Class = form.ClassBox.Text;
             }
 
             if (form.DriverCheck.Checked)
             {
-                driver = form.DriverBox.Text;
+                desiredTaxi.Driver = form.DriverBox.Text;
             }
 
             if (form.NumberCheck.Checked)
             {
-                number = form.NumberBox.Text;
+                desiredTaxi.Number = form.NumberBox.Text;
             }
 
-            if (brand == string.Empty && model == string.Empty && color == string.Empty &&
-                @class == string.Empty && driver == string.Empty && number == string.Empty)
+            if (desiredTaxi.IsAllFieldsInitialized())
             {
                 return null;
             }
 
-            return new Taxi(brand, model, color, @class, driver, number);
+            return desiredTaxi;
         }
 
         private static ISearchEngineStrategy GetSearchEngine(TaxiFinderForm form)
