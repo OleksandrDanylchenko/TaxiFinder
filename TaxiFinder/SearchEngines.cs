@@ -68,38 +68,44 @@ namespace TaxiFinder
 
                     foreach (XmlElement element in taxi)
                     {
-                        if (element.Name == "brand" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Brand) ||
-                                                        desiredTaxi.Brand == string.Empty))
+                        if (element.Name == "brand" && (desiredTaxi.Brand == string.Empty ||
+                                                        ElementsComparer.IsEqual("brand", 
+                                                            element.InnerText, desiredTaxi.Brand)))
                         {
                             brand = element.InnerText;
                         }
 
-                        else if (element.Name == "model" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Model) ||
-                                                             desiredTaxi.Model == string.Empty))
+                        else if (element.Name == "model" && (desiredTaxi.Model == string.Empty ||
+                                                             ElementsComparer.IsEqual("model",
+                                                                 element.InnerText, desiredTaxi.Model)))
                         {
                             model = element.InnerText;
                         }
 
-                        else if (element.Name == "color" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Color) ||
-                                                             desiredTaxi.Color == string.Empty))
+                        else if (element.Name == "color" && (desiredTaxi.Color == string.Empty ||
+                                                             ElementsComparer.IsEqual("color",
+                                                                 element.InnerText, desiredTaxi.Color)))
                         {
                             color = element.InnerText;
                         }
 
-                        else if (element.Name == "class" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Class) ||
-                                                             desiredTaxi.Class == string.Empty))
+                        else if (element.Name == "class" && (desiredTaxi.Class == string.Empty ||
+                                                             ElementsComparer.IsEqual("class",
+                                                                 element.InnerText, desiredTaxi.Class)))
                         {
                             @class = element.InnerText;
                         }
 
-                        else if (element.Name == "driver" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Driver) ||
-                                                              desiredTaxi.Driver == string.Empty))
+                        else if (element.Name == "driver" && (desiredTaxi.Driver == string.Empty ||
+                                                              ElementsComparer.IsEqual("driver",
+                                                              element.InnerText, desiredTaxi.Driver)))
                         {
                             driver = element.InnerText;
                         }
 
-                        else if (element.Name == "number" && (SearchEngine.IsEqual(element.InnerText, desiredTaxi.Number) ||
-                                                              desiredTaxi.Number == string.Empty))
+                        else if (element.Name == "number" && (desiredTaxi.Number == string.Empty ||
+                                                              ElementsComparer.IsEqual("number",
+                                                                  element.InnerText, desiredTaxi.Number)))
                         {
                             number = element.InnerText;
                         }
@@ -147,38 +153,44 @@ namespace TaxiFinder
                     // Reads the element value
                     else if (xr.NodeType == XmlNodeType.Text)
                     {
-                        if (element == "brand" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Brand) ||
-                                                   desiredTaxi.Brand == string.Empty))
+                        if (element == "brand" && (desiredTaxi.Brand == string.Empty ||
+                                                   ElementsComparer.IsEqual("brand",
+                                                       xr.Value, desiredTaxi.Brand)))
                         {
                             brand = xr.Value;
                         }
 
-                        else if (element == "model" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Model) ||
-                                                        desiredTaxi.Model == string.Empty))
+                        else if (element == "model" && (desiredTaxi.Model == string.Empty ||
+                                                        ElementsComparer.IsEqual("model",
+                                                            xr.Value, desiredTaxi.Model)))
                         {
                             model = xr.Value;
                         }
 
-                        else if (element == "color" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Color) ||
-                                                        desiredTaxi.Color == string.Empty))
+                        else if (element == "color" && (desiredTaxi.Color == string.Empty ||
+                                                        ElementsComparer.IsEqual("color",
+                                                            xr.Value, desiredTaxi.Color)))
                         {
                             color = xr.Value;
                         }
 
-                        else if (element == "class" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Class) ||
-                                                        desiredTaxi.Class == string.Empty))
+                        else if (element == "class" && (desiredTaxi.Class == string.Empty ||
+                                                        ElementsComparer.IsEqual("class",
+                                                            xr.Value, desiredTaxi.Class)))
                         {
                             @class = xr.Value;
                         }
 
-                        else if (element == "driver" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Driver) ||
-                                                         desiredTaxi.Driver == string.Empty))
+                        else if (element == "driver" && (desiredTaxi.Driver == string.Empty ||
+                                                         ElementsComparer.IsEqual("driver",
+                                                             xr.Value, desiredTaxi.Driver)))
                         {
                             driver = xr.Value;
                         }
 
-                        else if (element == "number" && (SearchEngine.IsEqual(xr.Value, desiredTaxi.Number) ||
-                                                         desiredTaxi.Number == string.Empty))
+                        else if (element == "number" && (desiredTaxi.Number == string.Empty ||
+                                                         ElementsComparer.IsEqual("number",
+                                                             xr.Value, desiredTaxi.Number)))
                         {
                             number = xr.Value;
                         }
@@ -214,18 +226,24 @@ namespace TaxiFinder
             var foundedElements = from elem in xdoc.Element("taxis")?.Elements("taxi")
                                   where
                                   (
-                                  (SearchEngine.IsEqual(elem.Element("brand")?.Value.ToString(), desiredTaxi.Brand) ||
-                                   desiredTaxi.Brand == string.Empty) &&
-                                  (SearchEngine.IsEqual(elem.Element("model")?.Value.ToString(), desiredTaxi.Model) ||
-                                   desiredTaxi.Model == string.Empty) &&
-                                  (SearchEngine.IsEqual(elem.Element("color")?.Value.ToString(), desiredTaxi.Color) ||
-                                   desiredTaxi.Color == string.Empty) &&
-                                  (SearchEngine.IsEqual(elem.Element("class")?.Value.ToString(), desiredTaxi.Class) ||
-                                   desiredTaxi.Class == string.Empty) &&
-                                  (SearchEngine.IsEqual(elem.Element("driver")?.Value.ToString(), desiredTaxi.Driver) ||
-                                   desiredTaxi.Driver == string.Empty) &&
-                                  (SearchEngine.IsEqual(elem.Element("number")?.Value.ToString(), desiredTaxi.Number) ||
-                                   desiredTaxi.Number == string.Empty)
+                                   (desiredTaxi.Brand == string.Empty ||
+                                    ElementsComparer.IsEqual("brand",
+                                        elem.Element("brand")?.Value.ToString(), desiredTaxi.Brand)) &&
+                                   (desiredTaxi.Model == string.Empty ||
+                                    ElementsComparer.IsEqual("model",
+                                        elem.Element("model")?.Value.ToString(), desiredTaxi.Model)) &&
+                                   (desiredTaxi.Color == string.Empty ||
+                                    ElementsComparer.IsEqual("color",
+                                        elem.Element("color")?.Value.ToString(), desiredTaxi.Color)) &&
+                                   (desiredTaxi.Class == string.Empty ||
+                                    ElementsComparer.IsEqual("class",
+                                        elem.Element("class")?.Value.ToString(), desiredTaxi.Class)) &&
+                                   (desiredTaxi.Driver == string.Empty ||
+                                    ElementsComparer.IsEqual("driver",
+                                        elem.Element("driver")?.Value.ToString(), desiredTaxi.Driver)) &&
+                                   (desiredTaxi.Number == string.Empty ||
+                                    ElementsComparer.IsEqual("number",
+                                        elem.Element("number")?.Value.ToString(), desiredTaxi.Number))
                                   )
                                   select new
                                   {

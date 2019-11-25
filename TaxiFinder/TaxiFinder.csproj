@@ -52,7 +52,7 @@
     <Compile Include="FilesParser.cs" />
     <Compile Include="Searcher.cs" />
     <Compile Include="SearchEngines.cs" />
-    <Compile Include="StrComparer.cs" />
+    <Compile Include="ElementsComparer.cs" />
     <Compile Include="Taxi.cs" />
     <Compile Include="TaxiFinderForm.cs">
       <SubType>Form</SubType>

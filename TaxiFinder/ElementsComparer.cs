@@ -2,13 +2,33 @@
 
 namespace TaxiFinder
 {
-    internal static class StrComparer
+    internal static class ElementsComparer
     {
-        public static bool IsEqual(string source, string target)
+        public static bool IsEqual(string criterion, string source, string target)
         {
-            const double probableValue = 0.55;
+            double probableRate = 1;
+            switch (criterion)
+            {
+                case "brand":
+                    probableRate = 0.5;
+                    break;
+                case "model":
+                    probableRate = 0.2;
+                    break;
+                case "color":
+                    probableRate = 0.65;
+                    break;
+                case "class": 
+                case "driver":
+                    probableRate = 0.6;
+                    break;
+                case "number":
+                    probableRate = 0.67;
+                    break;
+            }
+
             double similarityRate = CalculateProbableSimilarity(source, target);
-            return similarityRate >= probableValue;
+            return similarityRate >= probableRate;
         }
 
         private static double CalculateProbableSimilarity(string source, string target)
@@ -18,7 +38,7 @@ namespace TaxiFinder
             if (source == target) return 1;
 
             int stepsToSame = ComputeLevenshteinDistance(source, target);
-            return 1 - (stepsToSame / Math.Max(source.Length, target.Length));
+            return 1 - (stepsToSame / (double)Math.Max(source.Length, target.Length));
         }
 
         // Returns the number of steps required to transform the source string
