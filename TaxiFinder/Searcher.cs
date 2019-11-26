@@ -8,14 +8,14 @@ namespace TaxiFinder
     {
         public static List<(string service, List<Taxi> foundedTaxis)> ExecuteSearch(TaxiFinderForm form)
         {
-            Taxi desiredTaxi = CreateSearchRequest(form);
-            ISearchEngineStrategy engineStrategy = GetSearchEngine(form);
+            var desiredTaxi = CreateSearchRequest(form);
+            var engineStrategy = GetSearchEngine(form);
             if (desiredTaxi == null || engineStrategy == null)
             {
                 return new List<(string, List<Taxi>)>();
             }
 
-            SearchEngine executiveEngine = new SearchEngine(desiredTaxi, engineStrategy);
+            var executiveEngine = new SearchEngine(desiredTaxi, engineStrategy);
 
             try
             {
@@ -33,7 +33,7 @@ namespace TaxiFinder
 
         private static Taxi CreateSearchRequest(TaxiFinderForm form)
         {
-            Taxi desiredTaxi = new Taxi();
+            var desiredTaxi = new Taxi();
 
             if (form.BrandCheck.Checked)
             {

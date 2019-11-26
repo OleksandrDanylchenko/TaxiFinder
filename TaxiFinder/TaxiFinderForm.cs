@@ -27,10 +27,9 @@ namespace TaxiFinder
 
         private void ConvertToHTMLButton_Click(object sender, EventArgs e)
         {
-            HTMLConverter converter = new HTMLConverter(_results, this);
+            var converter = new HTMLConverter(_results, this);
             converter.Convert();
         }
-
 
         private void BrandCheck_HelpRequested(object sender, HelpEventArgs hlpevent)
         {

@@ -23,16 +23,16 @@ namespace TaxiFinder
 
         private static string[] GetFilesPaths()
         {
-            string exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string dataPath = GetDataPath(exePath);
+            var exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var dataPath = GetDataPath(exePath);
 
-            string[] filesPaths = Directory.GetFiles(dataPath, "*.xml", SearchOption.TopDirectoryOnly);
+            var filesPaths = Directory.GetFiles(dataPath, "*.xml", SearchOption.TopDirectoryOnly);
             return filesPaths;
         }
 
         private static string GetDataPath(string exePath)
         {
-            string dataPath = string.Empty;
+            var dataPath = string.Empty;
             try
             {
                 dataPath = Path.Combine(exePath ?? throw new ArgumentNullException(), "DataXML");
@@ -49,7 +49,7 @@ namespace TaxiFinder
 
         private static string[] GetServicesNames()
         {
-            string[] fileNames = GetFilesPaths()
+            var fileNames = GetFilesPaths()
                 .Select(Path.GetFileNameWithoutExtension)
                 .ToArray();
             return fileNames;

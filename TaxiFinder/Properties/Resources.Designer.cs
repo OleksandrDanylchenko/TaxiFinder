@@ -61,6 +61,16 @@ namespace TaxiFinder.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error occurred while reading an input XML file.Try to reload data XML files..
+        /// </summary>
+        internal static string Searcher_ExecuteSearch_Error_occurred_while_reading_an_input_XML_file_Try_to_reload_data_XML_files_ {
+            get {
+                return ResourceManager.GetString("Searcher_ExecuteSearch_Error_occurred_while_reading_an_input_XML_file_Try_to_relo" +
+                        "ad_data_XML_files_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Click on label to start searching with one of three possible search engines.
         /// </summary>
         internal static string TaxiFinder_SearchButton_HelpRequested_Click_on_label_to_start_searching_with_one_of_three_possible_search_engines {

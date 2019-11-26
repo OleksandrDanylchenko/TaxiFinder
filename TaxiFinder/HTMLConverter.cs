@@ -26,8 +26,8 @@ namespace TaxiFinder
         {
             if (_outputTaxis.Count != 0 && _form.HTMLSaveDialog.ShowDialog() == DialogResult.OK)
             {
-                string htmlPath = _form.HTMLSaveDialog.FileName;
-                string xmlPath = ExtractResultsInTempXML(htmlPath);
+                var htmlPath = _form.HTMLSaveDialog.FileName;
+                var xmlPath = ExtractResultsInTempXML(htmlPath);
 
                 TransformWithTemplate(xmlPath, htmlPath);
                 RemoveTempXML(xmlPath);
@@ -36,10 +36,10 @@ namespace TaxiFinder
 
         private string ExtractResultsInTempXML(string htmlPath)
         {
-            string xmlFilePath = htmlPath.Replace(".html", ".xml");
+            var xmlFilePath = htmlPath.Replace(".html", ".xml");
 
-            FileStream fs = new FileStream(xmlFilePath, FileMode.Create);
-            XmlSerializer serializer = new XmlSerializer(_outputTaxis.GetType(), new XmlRootAttribute("Taxis"));
+            var fs = new FileStream(xmlFilePath, FileMode.Create);
+            var serializer = new XmlSerializer(_outputTaxis.GetType(), new XmlRootAttribute("Taxis"));
             serializer.Serialize(fs, _outputTaxis);
             fs.Close();
 
@@ -48,7 +48,7 @@ namespace TaxiFinder
 
         private static void TransformWithTemplate(string xmlPath, string htmlPath)
         {
-            XslCompiledTransform xslt = new XslCompiledTransform();
+            var xslt = new XslCompiledTransform();
             xslt.Load(typeof(HTMLTransform));
             xslt.Transform(xmlPath, htmlPath);
         }

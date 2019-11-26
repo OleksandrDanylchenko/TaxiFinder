@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace TaxiFinder
 {
     internal static class ResultsPrinter
     {
-        public static void Print(List<(string service, List<Taxi> foundedTaxis)> results,
+        public static void Print(IEnumerable<(string service, List<Taxi> foundedTaxis)> results,
                                  RichTextBox resultsBox)
         {
             resultsBox.Text = string.Empty;
@@ -13,18 +14,18 @@ namespace TaxiFinder
             {
                 resultsBox.AppendText($"\n{service}:\n");
 
-                int num = 1;
-                foreach (var taxi in foundedTaxis)
+                var outputNumber = 1;
+                foreach (var taxiOutput in foundedTaxis
+                    .Select(taxi => $"{outputNumber}:\n" +
+                                    $"  Brand: {taxi.Brand}\n" +
+                                    $"  Model: {taxi.Model}\n" +
+                                    $"  Color: {taxi.Color}\n" +
+                                    $"  Class {taxi.Class}\n" +
+                                    $"  Driver {taxi.Driver}\n" +
+                                    $"  Number {taxi.Number}\n"))
                 {
-                    var taxiOutput = $"{num}:\n" +
-                                     $"  Brand: {taxi.Brand}\n" +
-                                     $"  Model: {taxi.Model}\n" +
-                                     $"  Color: {taxi.Color}\n" +
-                                     $"  Class {taxi.Class}\n" +
-                                     $"  Driver {taxi.Driver}\n" +
-                                     $"  Number {taxi.Number}\n";
                     resultsBox.AppendText(taxiOutput);
-                    ++num;
+                    ++outputNumber;
                 }
             }
         }
