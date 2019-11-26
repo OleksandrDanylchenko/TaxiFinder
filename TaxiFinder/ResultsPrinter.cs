@@ -4,15 +4,20 @@ using System.Windows.Forms;
 
 namespace TaxiFinder
 {
-    internal static class ResultsPrinter
+    internal class ResultsPrinter
     {
-        public static void Print(IEnumerable<(string service, List<Taxi> foundedTaxis)> results,
-                                 RichTextBox resultsBox)
+        private readonly RichTextBox _outputBox;
+        public ResultsPrinter(RichTextBox outputBox)
         {
-            resultsBox.Text = string.Empty;
+            _outputBox = outputBox;
+        }
+
+        public void Print(IEnumerable<(string service, List<Taxi> foundedTaxis)> results)
+        {
+            _outputBox.Text = string.Empty;
             foreach (var (service, foundedTaxis) in results)
             {
-                resultsBox.AppendText($"\n{service}:\n");
+                _outputBox.AppendText($"\n{service}:\n");
 
                 var outputNumber = 1;
                 foreach (var taxiOutput in foundedTaxis
@@ -24,7 +29,7 @@ namespace TaxiFinder
                                     $"  Driver {taxi.Driver}\n" +
                                     $"  Number {taxi.Number}\n"))
                 {
-                    resultsBox.AppendText(taxiOutput);
+                    _outputBox.AppendText(taxiOutput);
                     ++outputNumber;
                 }
             }

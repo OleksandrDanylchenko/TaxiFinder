@@ -4,12 +4,18 @@ using System.Windows.Forms;
 
 namespace TaxiFinder
 {
-    internal static class Searcher
+    internal class Searcher
     {
-        public static List<(string service, List<Taxi> foundedTaxis)> ExecuteSearch(TaxiFinderForm form)
+        private readonly TaxiFinderForm _form;
+        public Searcher(TaxiFinderForm form)
         {
-            var desiredTaxi = CreateSearchRequest(form);
-            var engineStrategy = GetSearchEngine(form);
+            _form = form;
+        }
+
+        public List<(string service, List<Taxi> foundedTaxis)> ExecuteSearch()
+        {
+            var desiredTaxi = CreateSearchRequest();
+            var engineStrategy = GetSearchEngine();
             if (desiredTaxi == null || engineStrategy == null)
             {
                 return new List<(string, List<Taxi>)>();
@@ -31,58 +37,58 @@ namespace TaxiFinder
             }
         }
 
-        private static Taxi CreateSearchRequest(TaxiFinderForm form)
+        private Taxi CreateSearchRequest()
         {
             var desiredTaxi = new Taxi();
 
-            if (form.BrandCheck.Checked)
+            if (_form.BrandCheck.Checked)
             {
-                desiredTaxi.Brand = form.BrandBox.Text;
+                desiredTaxi.Brand = _form.BrandBox.Text;
             }
 
-            if (form.ModelCheck.Checked)
+            if (_form.ModelCheck.Checked)
             {
-                desiredTaxi.Model = form.ModelBox.Text;
+                desiredTaxi.Model = _form.ModelBox.Text;
             }
 
-            if (form.ColorCheck.Checked)
+            if (_form.ColorCheck.Checked)
             {
-                desiredTaxi.Color = form.ColorBox.Text;
+                desiredTaxi.Color = _form.ColorBox.Text;
             }
 
-            if (form.ClassCheck.Checked)
+            if (_form.ClassCheck.Checked)
             {
-                desiredTaxi.Class = form.ClassBox.Text;
+                desiredTaxi.Class = _form.ClassBox.Text;
             }
 
-            if (form.DriverCheck.Checked)
+            if (_form.DriverCheck.Checked)
             {
-                desiredTaxi.Driver = form.DriverBox.Text;
+                desiredTaxi.Driver = _form.DriverBox.Text;
             }
 
-            if (form.NumberCheck.Checked)
+            if (_form.NumberCheck.Checked)
             {
-                desiredTaxi.Number = form.NumberBox.Text;
+                desiredTaxi.Number = _form.NumberBox.Text;
             }
 
             return desiredTaxi.IsFieldsBlank() ? null : desiredTaxi;
         }
 
-        private static ISearchEngineStrategy GetSearchEngine(TaxiFinderForm form)
+        private ISearchEngineStrategy GetSearchEngine()
         {
             ISearchEngineStrategy searchEngine = null;
 
-            if (form.DomButton.Checked)
+            if (_form.DomButton.Checked)
             {
                 searchEngine = new EngineDOM();
             }
 
-            if (form.SaxButton.Checked)
+            if (_form.SaxButton.Checked)
             {
                 searchEngine = new EngineSAX();
             }
 
-            if (form.LinqButton.Checked)
+            if (_form.LinqButton.Checked)
             {
                 searchEngine = new EngineLinq();
             }

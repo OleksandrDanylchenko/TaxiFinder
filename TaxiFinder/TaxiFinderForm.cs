@@ -15,8 +15,11 @@ namespace TaxiFinder
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            _results = Searcher.ExecuteSearch(this);
-            ResultsPrinter.Print(_results, ResultsBox);
+            var searcher = new Searcher(this);
+            _results = searcher.ExecuteSearch();
+
+            var printer = new ResultsPrinter(ResultsBox);
+            printer.Print(_results);
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
