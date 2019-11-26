@@ -24,13 +24,13 @@ namespace TaxiFinder
         private static string[] GetFilesPaths()
         {
             var exePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var dataPath = GetDataPath(exePath);
+            var dataPath = GetDataFolderPath(exePath);
 
             var filesPaths = Directory.GetFiles(dataPath, "*.xml", SearchOption.TopDirectoryOnly);
             return filesPaths;
         }
 
-        private static string GetDataPath(string exePath)
+        private static string GetDataFolderPath(string exePath)
         {
             var dataPath = string.Empty;
             try
