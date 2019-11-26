@@ -6,7 +6,7 @@ namespace TaxiFinder
     {
         public static bool IsEqual(string source, string target)
         {
-            double probableRate = 0.5;
+            const double probableRate = 0.5;
 
             double similarityRate = CalculateProbableSimilarity(source, target);
             return similarityRate >= probableRate;
@@ -18,7 +18,7 @@ namespace TaxiFinder
             if ((source.Length == 0) || (target.Length == 0)) return 0;
             if (source == target) return 1;
 
-            int stepsToSame = ComputeLevenshteinDistance(source, target);
+            var stepsToSame = ComputeLevenshteinDistance(source, target);
             return 1 - (stepsToSame / (double)Math.Max(source.Length, target.Length));
         }
 
@@ -30,8 +30,8 @@ namespace TaxiFinder
             source = source.ToLower();
             target = target.ToLower();
 
-            int sourceWordCount = source.Length;
-            int targetWordCount = target.Length;
+            var sourceWordCount = source.Length;
+            var targetWordCount = target.Length;
 
             // Step 1
             if (sourceWordCount == 0)
@@ -45,25 +45,25 @@ namespace TaxiFinder
             }
 
             // Creating measurement table
-            int[,] distance = new int[sourceWordCount + 1, targetWordCount + 1];
+            var distance = new int[sourceWordCount + 1, targetWordCount + 1];
 
             // Step 2
-            for (int i = 0; i <= sourceWordCount;)
+            for (var i = 0; i <= sourceWordCount;)
             {
                 distance[i, 0] = i++;
             }
 
-            for (int j = 0; j <= targetWordCount;)
+            for (var j = 0; j <= targetWordCount;)
             {
                 distance[0, j] = j++;
             }
 
-            for (int i = 1; i <= sourceWordCount; i++)
+            for (var i = 1; i <= sourceWordCount; i++)
             {
-                for (int j = 1; j <= targetWordCount; j++)
+                for (var j = 1; j <= targetWordCount; j++)
                 {
                     // Step 3
-                    int cost = (target[j - 1] == source[i - 1]) ? 0 : 1;
+                    var cost = (target[j - 1] == source[i - 1]) ? 0 : 1;
 
                     // Step 4
                     distance[i, j] = Math.Min(Math.Min(distance[i - 1, j] + 1, distance[i, j - 1] + 1),
