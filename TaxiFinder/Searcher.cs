@@ -22,9 +22,10 @@ namespace TaxiFinder
                 List<(string, List<Taxi>)> results = executiveEngine.ScanAllFiles();
                 return results;
             }
-            catch (ArgumentNullException)
+            catch (NullReferenceException)
             {
-                MessageBox.Show("Error occurred while reading an input XML file",
+                MessageBox.Show("Error occurred while reading an input XML file." +
+                                "Try to reload data XML files.",
                     "XML file error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new List<(string, List<Taxi>)>();
             }

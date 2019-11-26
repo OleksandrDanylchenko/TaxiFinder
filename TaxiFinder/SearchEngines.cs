@@ -64,37 +64,43 @@ namespace TaxiFinder
                     foreach (XmlElement element in taxi)
                     {
                         if (element.Name == "Brand" && (desiredTaxi.Brand == string.Empty ||
-                                                        ElementsComparer.IsEqual(element.InnerText, desiredTaxi.Brand)))
+                                                        ElementsComparer.IsEqual(element.InnerText, 
+                                                            desiredTaxi.Brand)))
                         {
                             newTaxi.Brand = element.InnerText;
                         }
 
                         else if (element.Name == "Model" && (desiredTaxi.Model == string.Empty ||
-                                                             element.InnerText.ToUpper().Contains(desiredTaxi.Model.ToUpper())))
+                                                             element.InnerText.ToUpper()
+                                                                 .Contains(desiredTaxi.Model.ToUpper())))
                         {
                             newTaxi.Model = element.InnerText;
                         }
 
                         else if (element.Name == "Color" && (desiredTaxi.Color == string.Empty ||
-                                                             ElementsComparer.IsEqual(element.InnerText, desiredTaxi.Color)))
+                                                             ElementsComparer.IsEqual(element.InnerText, 
+                                                                 desiredTaxi.Color)))
                         {
                             newTaxi.Color = element.InnerText;
                         }
 
                         else if (element.Name == "Class" && (desiredTaxi.Class == string.Empty ||
-                                                             ElementsComparer.IsEqual(element.InnerText, desiredTaxi.Class)))
+                                                             ElementsComparer.IsEqual(element.InnerText, 
+                                                                 desiredTaxi.Class)))
                         {
                             newTaxi.Class = element.InnerText;
                         }
 
                         else if (element.Name == "Driver" && (desiredTaxi.Driver == string.Empty ||
-                                                              ElementsComparer.IsEqual(element.InnerText, desiredTaxi.Driver)))
+                                                              ElementsComparer.IsEqual(element.InnerText, 
+                                                                  desiredTaxi.Driver)))
                         {
                             newTaxi.Driver = element.InnerText;
                         }
 
                         else if (element.Name == "Number" && (desiredTaxi.Number == string.Empty ||
-                                                              ElementsComparer.IsEqual(element.InnerText, desiredTaxi.Number)))
+                                                              ElementsComparer.IsEqual(element.InnerText, 
+                                                                  desiredTaxi.Number)))
                         {
                             newTaxi.Number = element.InnerText;
                         }
@@ -133,36 +139,42 @@ namespace TaxiFinder
                     else if (xr.NodeType == XmlNodeType.Text)
                     {
                         if (element == "Brand" && (desiredTaxi.Brand == string.Empty ||
-                                                   ElementsComparer.IsEqual(xr.Value, desiredTaxi.Brand)))
+                                                   ElementsComparer.IsEqual(xr.Value, 
+                                                       desiredTaxi.Brand)))
                         {
                             iterateTaxi.Brand = xr.Value;
                         }
                         else if (element == "Model" && (desiredTaxi.Model == string.Empty || 
-                                                        xr.Value.ToUpper().Contains(desiredTaxi.Model.ToUpper())))
+                                                        xr.Value.ToUpper()
+                                                            .Contains(desiredTaxi.Model.ToUpper())))
                         {
                             iterateTaxi.Model = xr.Value;
                         }
 
                         else if (element == "Color" && (desiredTaxi.Color == string.Empty ||
-                                                        ElementsComparer.IsEqual(xr.Value, desiredTaxi.Color)))
+                                                        ElementsComparer.IsEqual(xr.Value, 
+                                                            desiredTaxi.Color)))
                         {
                             iterateTaxi.Color = xr.Value;
                         }
 
                         else if (element == "Class" && (desiredTaxi.Class == string.Empty ||
-                                                        ElementsComparer.IsEqual(xr.Value, desiredTaxi.Class)))
+                                                        ElementsComparer.IsEqual(xr.Value, 
+                                                            desiredTaxi.Class)))
                         {
                             iterateTaxi.Class = xr.Value;
                         }
 
                         else if (element == "Driver" && (desiredTaxi.Driver == string.Empty ||
-                                                         ElementsComparer.IsEqual(xr.Value, desiredTaxi.Driver)))
+                                                         ElementsComparer.IsEqual(xr.Value, 
+                                                             desiredTaxi.Driver)))
                         {
                             iterateTaxi.Driver = xr.Value;
                         }
 
                         else if (element == "Number" && (desiredTaxi.Number == string.Empty ||
-                                                         ElementsComparer.IsEqual(xr.Value, desiredTaxi.Number)))
+                                                         ElementsComparer.IsEqual(xr.Value, 
+                                                             desiredTaxi.Number)))
                         {
                             iterateTaxi.Number = xr.Value;
                         }

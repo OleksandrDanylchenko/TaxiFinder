@@ -11,17 +11,20 @@ namespace TaxiFinder
             resultsBox.Text = string.Empty;
             foreach (var (service, foundedTaxis) in results)
             {
-                resultsBox.AppendText($"{service}:\n");
+                resultsBox.AppendText($"\n{service}:\n");
+
+                int num = 1;
                 foreach (var taxi in foundedTaxis)
                 {
-                    var taxiOutput = $"Brand: {taxi.Brand}\n" +
-                                     $"Model: {taxi.Model}\n" +
-                                     $"Color: {taxi.Color}\n" + 
-                                     $"Class {taxi.Class}\n" +
-                                     $"Driver {taxi.Driver}\n" +
-                                     $"Number {taxi.Number}\n" +
-                                     "---------------\n";
+                    var taxiOutput = $"{num}:\n" +
+                                     $"  Brand: {taxi.Brand}\n" +
+                                     $"  Model: {taxi.Model}\n" +
+                                     $"  Color: {taxi.Color}\n" +
+                                     $"  Class {taxi.Class}\n" +
+                                     $"  Driver {taxi.Driver}\n" +
+                                     $"  Number {taxi.Number}\n";
                     resultsBox.AppendText(taxiOutput);
+                    ++num;
                 }
             }
         }

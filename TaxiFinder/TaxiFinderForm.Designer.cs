@@ -58,7 +58,7 @@
             this.ClearButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.Location = new System.Drawing.Point(542, 904);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(163, 55);
+            this.ClearButton.Size = new System.Drawing.Size(194, 55);
             this.ClearButton.TabIndex = 1;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@
             // ConvertToHTMLButton
             // 
             this.ConvertToHTMLButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConvertToHTMLButton.Location = new System.Drawing.Point(710, 904);
+            this.ConvertToHTMLButton.Location = new System.Drawing.Point(742, 904);
             this.ConvertToHTMLButton.Name = "ConvertToHTMLButton";
-            this.ConvertToHTMLButton.Size = new System.Drawing.Size(259, 55);
+            this.ConvertToHTMLButton.Size = new System.Drawing.Size(323, 55);
             this.ConvertToHTMLButton.TabIndex = 2;
             this.ConvertToHTMLButton.Text = "Convert to HTML";
             this.ConvertToHTMLButton.UseVisualStyleBackColor = true;
@@ -432,7 +432,7 @@
             this.ResultsBox.Location = new System.Drawing.Point(546, 12);
             this.ResultsBox.Name = "ResultsBox";
             this.ResultsBox.ReadOnly = true;
-            this.ResultsBox.Size = new System.Drawing.Size(425, 886);
+            this.ResultsBox.Size = new System.Drawing.Size(519, 886);
             this.ResultsBox.TabIndex = 19;
             this.ResultsBox.Text = "";
             this.ResultsBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ResultsBox_HelpRequested);
@@ -450,7 +450,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(981, 971);
+            this.ClientSize = new System.Drawing.Size(1077, 971);
             this.Controls.Add(this.ResultsBox);
             this.Controls.Add(this.ClassBox);
             this.Controls.Add(this.ClassCheck);

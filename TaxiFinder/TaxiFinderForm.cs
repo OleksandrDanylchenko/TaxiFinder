@@ -22,15 +22,13 @@ namespace TaxiFinder
         private void ClearButton_Click(object sender, EventArgs e)
         {
             ResultsBox.Text = string.Empty;
+            _results.Clear();
         }
 
         private void ConvertToHTMLButton_Click(object sender, EventArgs e)
         {
-            if (HTMLSaveDialog.ShowDialog().Equals(DialogResult.OK))
-            {
-                HTMLConverter converter = new HTMLConverter(_results, HTMLSaveDialog);
-                converter.Convert();
-            }
+            HTMLConverter converter = new HTMLConverter(_results, this);
+            converter.Convert();
         }
 
 

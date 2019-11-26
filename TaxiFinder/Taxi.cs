@@ -10,15 +10,15 @@ namespace TaxiFinder
             Brand = Model = Color = Class = Driver = Number = string.Empty;
         }
 
-        public Taxi(string brand, string model, string color, string @class, string driver, string number)
-        {
-            Brand = brand;
-            Model = model;
-            Color = color;
-            Class = @class;
-            Driver = driver;
-            Number = number;
-        }
+        //public Taxi(string brand, string model, string color, string @class, string driver, string number)
+        //{
+        //    Brand = brand;
+        //    Model = model;
+        //    Color = color;
+        //    Class = @class;
+        //    Driver = driver;
+        //    Number = number;
+        //}
 
         // set property is public to allow serialization
         public string Brand { get; set; }
