@@ -27,8 +27,8 @@ namespace TaxiFinder
         private static int ComputeLevenshteinDistance(string source, string target)
         {
             // Preparations
-            source = source.ToLower();
-            target = target.ToLower();
+            source = source.ToLower().Trim();
+            target = target.ToLower().Trim();
 
             var sourceWordCount = source.Length;
             var targetWordCount = target.Length;
