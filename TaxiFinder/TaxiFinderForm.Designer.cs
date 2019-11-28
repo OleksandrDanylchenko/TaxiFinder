@@ -54,178 +54,140 @@
             // ClearButton
             // 
             this.ClearButton.AutoEllipsis = true;
-            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ClearButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.Location = new System.Drawing.Point(542, 904);
+            resources.ApplyResources(this.ClearButton, "ClearButton");
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(194, 55);
-            this.ClearButton.TabIndex = 1;
-            this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             this.ClearButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ClearButton_HelpRequested);
             // 
             // ConvertToHTMLButton
             // 
-            this.ConvertToHTMLButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConvertToHTMLButton.Location = new System.Drawing.Point(742, 904);
+            resources.ApplyResources(this.ConvertToHTMLButton, "ConvertToHTMLButton");
             this.ConvertToHTMLButton.Name = "ConvertToHTMLButton";
-            this.ConvertToHTMLButton.Size = new System.Drawing.Size(323, 55);
-            this.ConvertToHTMLButton.TabIndex = 2;
-            this.ConvertToHTMLButton.Text = "Convert to HTML";
             this.ConvertToHTMLButton.UseVisualStyleBackColor = true;
             this.ConvertToHTMLButton.Click += new System.EventHandler(this.ConvertToHTMLButton_Click);
             this.ConvertToHTMLButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ConvertToHTMLButton_HelpRequested);
             // 
             // BrandCheck
             // 
-            this.BrandCheck.Appearance = System.Windows.Forms.Appearance.Button;
-            this.BrandCheck.AutoSize = true;
-            this.BrandCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BrandCheck.Location = new System.Drawing.Point(13, 248);
+            resources.ApplyResources(this.BrandCheck, "BrandCheck");
             this.BrandCheck.Name = "BrandCheck";
-            this.BrandCheck.Size = new System.Drawing.Size(128, 39);
-            this.BrandCheck.TabIndex = 3;
-            this.BrandCheck.Text = " Brand:";
             this.BrandCheck.UseVisualStyleBackColor = true;
             this.BrandCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.BrandCheck_HelpRequested);
             // 
             // BrandBox
             // 
             this.BrandBox.AutoCompleteCustomSource.AddRange(new string[] {
-            "Acura",
-            "Alfa Romeo",
-            "Aston Martin",
-            "Audi",
-            "Skoda",
-            "Bentley",
-            "BMW",
-            "Bugatti",
-            "Buick",
-            "Cadillac",
-            "Chevrolet",
-            "Chrysler",
-            "Citroen",
-            "Dodge",
-            "Ferrari",
-            "Fiat",
-            "Ford",
-            "Geely",
-            "General Motors",
-            "GMC",
-            "Honda",
-            "Hyundai",
-            "Infiniti",
-            "Jaguar",
-            "Kia",
-            "Jeep",
-            "Koenigsegg",
-            "Lamborghini",
-            "Land Rover",
-            "Lexus",
-            "Maserati",
-            "Mazda",
-            "McLaren",
-            "Mercedes",
-            "Mini",
-            "Mitsubishi",
-            "Nissan",
-            "Pagani",
-            "Peugeot",
-            "Porsche",
-            "Ram",
-            "Renault",
-            "Rolls Royce",
-            "Saab",
-            "Subaru",
-            "Suzuki",
-            "Tata Motors",
-            "Tesla",
-            "Toyota",
-            "Volkswagen",
-            "Volvo"});
+            resources.GetString("BrandBox.AutoCompleteCustomSource"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource1"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource2"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource3"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource4"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource5"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource6"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource7"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource8"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource9"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource10"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource11"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource12"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource13"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource14"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource15"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource16"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource17"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource18"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource19"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource20"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource21"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource22"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource23"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource24"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource25"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource26"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource27"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource28"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource29"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource30"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource31"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource32"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource33"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource34"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource35"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource36"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource37"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource38"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource39"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource40"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource41"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource42"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource43"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource44"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource45"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource46"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource47"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource48"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource49"),
+            resources.GetString("BrandBox.AutoCompleteCustomSource50")});
             this.BrandBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BrandBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.BrandBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.BrandBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.BrandBox, "BrandBox");
             this.BrandBox.ForeColor = System.Drawing.Color.Black;
-            this.BrandBox.Location = new System.Drawing.Point(148, 251);
-            this.BrandBox.MaxLength = 12;
             this.BrandBox.Name = "BrandBox";
-            this.BrandBox.Size = new System.Drawing.Size(392, 35);
-            this.BrandBox.TabIndex = 4;
             this.BrandBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.BrandBox_HelpRequested);
             // 
             // ModelBox
             // 
             this.ModelBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ModelBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelBox.Location = new System.Drawing.Point(148, 307);
+            resources.ApplyResources(this.ModelBox, "ModelBox");
             this.ModelBox.Name = "ModelBox";
-            this.ModelBox.Size = new System.Drawing.Size(392, 35);
-            this.ModelBox.TabIndex = 6;
             this.ModelBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ModelBox_HelpRequested);
             // 
             // ModelCheck
             // 
-            this.ModelCheck.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ModelCheck.AutoSize = true;
-            this.ModelCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelCheck.Location = new System.Drawing.Point(13, 304);
+            resources.ApplyResources(this.ModelCheck, "ModelCheck");
             this.ModelCheck.Name = "ModelCheck";
-            this.ModelCheck.Size = new System.Drawing.Size(128, 39);
-            this.ModelCheck.TabIndex = 5;
-            this.ModelCheck.Text = " Model:";
             this.ModelCheck.UseVisualStyleBackColor = true;
             this.ModelCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ModelCheck_HelpRequested);
             // 
             // ColorBox
             // 
             this.ColorBox.AutoCompleteCustomSource.AddRange(new string[] {
-            "White",
-            "Silver",
-            "Gray",
-            "Black",
-            "Red",
-            "Maroon",
-            "Yellow",
-            "Olive",
-            "Lime",
-            "Green",
-            "Aqua",
-            "Teal",
-            "Blue",
-            "Navy",
-            "Fuchsia",
-            "Purple",
-            "Brown",
-            "Silver",
-            "Asphalt",
-            "Dark Blue",
-            "Dark Gray",
-            "Dark Green",
-            "Gold"});
+            resources.GetString("ColorBox.AutoCompleteCustomSource"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource1"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource2"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource3"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource4"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource5"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource6"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource7"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource8"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource9"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource10"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource11"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource12"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource13"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource14"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource15"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource16"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource17"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource18"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource19"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource20"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource21"),
+            resources.GetString("ColorBox.AutoCompleteCustomSource22")});
             this.ColorBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.ColorBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ColorBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ColorBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorBox.Location = new System.Drawing.Point(148, 365);
-            this.ColorBox.MaxLength = 10;
+            resources.ApplyResources(this.ColorBox, "ColorBox");
             this.ColorBox.Name = "ColorBox";
-            this.ColorBox.Size = new System.Drawing.Size(392, 35);
-            this.ColorBox.TabIndex = 8;
             this.ColorBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ColorBox_HelpRequested);
             // 
             // ColorCheck
             // 
-            this.ColorCheck.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ColorCheck.AutoSize = true;
-            this.ColorCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorCheck.Location = new System.Drawing.Point(13, 362);
+            resources.ApplyResources(this.ColorCheck, "ColorCheck");
             this.ColorCheck.Name = "ColorCheck";
-            this.ColorCheck.Size = new System.Drawing.Size(128, 39);
-            this.ColorCheck.TabIndex = 7;
-            this.ColorCheck.Text = " Color:";
             this.ColorCheck.UseVisualStyleBackColor = true;
             this.ColorCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ColorCheck_HelpRequested);
             // 
@@ -234,160 +196,122 @@
             this.DriverBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.DriverBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.DriverBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.DriverBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DriverBox.Location = new System.Drawing.Point(148, 476);
+            resources.ApplyResources(this.DriverBox, "DriverBox");
             this.DriverBox.Name = "DriverBox";
-            this.DriverBox.Size = new System.Drawing.Size(392, 35);
-            this.DriverBox.TabIndex = 10;
             this.DriverBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DriverBox_HelpRequested);
             // 
             // DriverCheck
             // 
-            this.DriverCheck.Appearance = System.Windows.Forms.Appearance.Button;
-            this.DriverCheck.AutoSize = true;
-            this.DriverCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DriverCheck.Location = new System.Drawing.Point(13, 473);
+            resources.ApplyResources(this.DriverCheck, "DriverCheck");
             this.DriverCheck.Name = "DriverCheck";
-            this.DriverCheck.Size = new System.Drawing.Size(128, 39);
-            this.DriverCheck.TabIndex = 9;
-            this.DriverCheck.Text = "Driver:";
             this.DriverCheck.UseVisualStyleBackColor = true;
             this.DriverCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DriverCheck_HelpRequested);
             // 
             // NumberBox
             // 
             this.NumberBox.AutoCompleteCustomSource.AddRange(new string[] {
-            "AA",
-            "KA",
-            "AB",
-            "KB",
-            "AC",
-            "KC",
-            "AE",
-            "KE",
-            "AH",
-            "KH",
-            "AI",
-            "KI",
-            "AK",
-            "KK",
-            "AM",
-            "KM",
-            "AO",
-            "KO",
-            "AP",
-            "KP",
-            "AT",
-            "KT",
-            "AX",
-            "KX",
-            "BA",
-            "HA",
-            "BB",
-            "HB",
-            "BC",
-            "HC",
-            "BE",
-            "HE",
-            "BH",
-            "HH",
-            "BI",
-            "HI",
-            "BK",
-            "HK",
-            "BM",
-            "HM",
-            "BO",
-            "HO",
-            "BP",
-            "HP",
-            "BT",
-            "HT",
-            "BT",
-            "HT",
-            "BX",
-            "HX",
-            "CA",
-            "IA",
-            "CB",
-            "IB",
-            "CE",
-            "IE",
-            "CH",
-            "IH",
-            "II"});
+            resources.GetString("NumberBox.AutoCompleteCustomSource"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource1"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource2"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource3"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource4"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource5"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource6"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource7"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource8"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource9"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource10"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource11"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource12"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource13"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource14"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource15"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource16"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource17"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource18"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource19"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource20"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource21"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource22"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource23"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource24"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource25"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource26"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource27"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource28"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource29"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource30"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource31"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource32"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource33"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource34"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource35"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource36"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource37"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource38"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource39"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource40"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource41"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource42"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource43"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource44"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource45"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource46"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource47"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource48"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource49"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource50"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource51"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource52"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource53"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource54"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource55"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource56"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource57"),
+            resources.GetString("NumberBox.AutoCompleteCustomSource58")});
             this.NumberBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.NumberBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.NumberBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.NumberBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.NumberBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberBox.Location = new System.Drawing.Point(148, 528);
-            this.NumberBox.MaxLength = 8;
+            resources.ApplyResources(this.NumberBox, "NumberBox");
             this.NumberBox.Name = "NumberBox";
-            this.NumberBox.Size = new System.Drawing.Size(392, 35);
-            this.NumberBox.TabIndex = 12;
             this.NumberBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.NumberBox_HelpRequested);
             // 
             // NumberCheck
             // 
-            this.NumberCheck.Appearance = System.Windows.Forms.Appearance.Button;
-            this.NumberCheck.AutoSize = true;
-            this.NumberCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberCheck.Location = new System.Drawing.Point(13, 525);
+            resources.ApplyResources(this.NumberCheck, "NumberCheck");
             this.NumberCheck.Name = "NumberCheck";
-            this.NumberCheck.Size = new System.Drawing.Size(128, 39);
-            this.NumberCheck.TabIndex = 11;
-            this.NumberCheck.Text = "Number:";
             this.NumberCheck.UseVisualStyleBackColor = true;
             this.NumberCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.NumberCheck_HelpRequested);
             // 
             // DomButton
             // 
-            this.DomButton.AutoSize = true;
-            this.DomButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DomButton.Location = new System.Drawing.Point(13, 602);
+            resources.ApplyResources(this.DomButton, "DomButton");
             this.DomButton.Name = "DomButton";
-            this.DomButton.Size = new System.Drawing.Size(139, 33);
-            this.DomButton.TabIndex = 13;
             this.DomButton.TabStop = true;
-            this.DomButton.Text = "DOM API";
             this.DomButton.UseVisualStyleBackColor = true;
             this.DomButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DomButton_HelpRequested);
             // 
             // SaxButton
             // 
-            this.SaxButton.AutoSize = true;
-            this.SaxButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaxButton.Location = new System.Drawing.Point(176, 602);
+            resources.ApplyResources(this.SaxButton, "SaxButton");
             this.SaxButton.Name = "SaxButton";
-            this.SaxButton.Size = new System.Drawing.Size(139, 33);
-            this.SaxButton.TabIndex = 14;
             this.SaxButton.TabStop = true;
-            this.SaxButton.Text = "SAX API";
             this.SaxButton.UseVisualStyleBackColor = true;
             this.SaxButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.SaxButton_HelpRequested);
             // 
             // LinqButton
             // 
-            this.LinqButton.AutoSize = true;
-            this.LinqButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinqButton.Location = new System.Drawing.Point(340, 602);
+            resources.ApplyResources(this.LinqButton, "LinqButton");
             this.LinqButton.Name = "LinqButton";
-            this.LinqButton.Size = new System.Drawing.Size(199, 33);
-            this.LinqButton.TabIndex = 15;
             this.LinqButton.TabStop = true;
-            this.LinqButton.Text = "Linq to XML";
             this.LinqButton.UseVisualStyleBackColor = true;
             this.LinqButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.LinqButton_HelpRequested);
             // 
             // SearchButton
             // 
-            this.SearchButton.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchButton.Location = new System.Drawing.Point(13, 651);
+            resources.ApplyResources(this.SearchButton, "SearchButton");
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(525, 55);
-            this.SearchButton.TabIndex = 16;
-            this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             this.SearchButton.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.SearchButton_HelpRequested);
@@ -395,31 +319,21 @@
             // ClassBox
             // 
             this.ClassBox.AutoCompleteCustomSource.AddRange(new string[] {
-            "Econom",
-            "Standart",
-            "Business",
-            "Premium"});
+            resources.GetString("ClassBox.AutoCompleteCustomSource"),
+            resources.GetString("ClassBox.AutoCompleteCustomSource1"),
+            resources.GetString("ClassBox.AutoCompleteCustomSource2"),
+            resources.GetString("ClassBox.AutoCompleteCustomSource3")});
             this.ClassBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.ClassBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ClassBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClassBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClassBox.Location = new System.Drawing.Point(148, 421);
-            this.ClassBox.MaxLength = 10;
+            resources.ApplyResources(this.ClassBox, "ClassBox");
             this.ClassBox.Name = "ClassBox";
-            this.ClassBox.Size = new System.Drawing.Size(392, 35);
-            this.ClassBox.TabIndex = 18;
             this.ClassBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ClassBox_HelpRequested);
             // 
             // ClassCheck
             // 
-            this.ClassCheck.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ClassCheck.AutoSize = true;
-            this.ClassCheck.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClassCheck.Location = new System.Drawing.Point(13, 418);
+            resources.ApplyResources(this.ClassCheck, "ClassCheck");
             this.ClassCheck.Name = "ClassCheck";
-            this.ClassCheck.Size = new System.Drawing.Size(128, 39);
-            this.ClassCheck.TabIndex = 17;
-            this.ClassCheck.Text = " Class:";
             this.ClassCheck.UseVisualStyleBackColor = true;
             this.ClassCheck.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ClassCheck_HelpRequested);
             // 
@@ -427,30 +341,22 @@
             // 
             this.ResultsBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ResultsBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ResultsBox.Font = new System.Drawing.Font("SF Mono", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.ResultsBox, "ResultsBox");
             this.ResultsBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ResultsBox.Location = new System.Drawing.Point(546, 12);
             this.ResultsBox.Name = "ResultsBox";
             this.ResultsBox.ReadOnly = true;
-            this.ResultsBox.Size = new System.Drawing.Size(519, 886);
-            this.ResultsBox.TabIndex = 19;
-            this.ResultsBox.Text = "";
             this.ResultsBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ResultsBox_HelpRequested);
             // 
             // HTMLSaveDialog
             // 
             this.HTMLSaveDialog.FileName = "ResultHTML";
-            this.HTMLSaveDialog.Filter = "HTML File(*.html) | *.html";
-            this.HTMLSaveDialog.Title = "Choose saving location:";
+            resources.ApplyResources(this.HTMLSaveDialog, "HTMLSaveDialog");
             // 
             // TaxiFinderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1077, 971);
             this.Controls.Add(this.ResultsBox);
             this.Controls.Add(this.ClassBox);
             this.Controls.Add(this.ClassCheck);
@@ -471,15 +377,12 @@
             this.Controls.Add(this.ConvertToHTMLButton);
             this.Controls.Add(this.ClearButton);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("SF Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TaxiFinderForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "TaxiFinder";
             this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
