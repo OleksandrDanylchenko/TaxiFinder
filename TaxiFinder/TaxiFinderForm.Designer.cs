@@ -53,8 +53,8 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.AutoEllipsis = true;
             resources.ApplyResources(this.ClearButton, "ClearButton");
+            this.ClearButton.AutoEllipsis = true;
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
@@ -77,6 +77,7 @@
             // 
             // BrandBox
             // 
+            resources.ApplyResources(this.BrandBox, "BrandBox");
             this.BrandBox.AutoCompleteCustomSource.AddRange(new string[] {
             resources.GetString("BrandBox.AutoCompleteCustomSource"),
             resources.GetString("BrandBox.AutoCompleteCustomSource1"),
@@ -132,15 +133,14 @@
             this.BrandBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.BrandBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.BrandBox.BackColor = System.Drawing.SystemColors.Menu;
-            resources.ApplyResources(this.BrandBox, "BrandBox");
             this.BrandBox.ForeColor = System.Drawing.Color.Black;
             this.BrandBox.Name = "BrandBox";
             this.BrandBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.BrandBox_HelpRequested);
             // 
             // ModelBox
             // 
-            this.ModelBox.BackColor = System.Drawing.SystemColors.MenuBar;
             resources.ApplyResources(this.ModelBox, "ModelBox");
+            this.ModelBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ModelBox.Name = "ModelBox";
             this.ModelBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ModelBox_HelpRequested);
             // 
@@ -153,6 +153,7 @@
             // 
             // ColorBox
             // 
+            resources.ApplyResources(this.ColorBox, "ColorBox");
             this.ColorBox.AutoCompleteCustomSource.AddRange(new string[] {
             resources.GetString("ColorBox.AutoCompleteCustomSource"),
             resources.GetString("ColorBox.AutoCompleteCustomSource1"),
@@ -180,7 +181,6 @@
             this.ColorBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.ColorBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ColorBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            resources.ApplyResources(this.ColorBox, "ColorBox");
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ColorBox_HelpRequested);
             // 
@@ -193,10 +193,10 @@
             // 
             // DriverBox
             // 
+            resources.ApplyResources(this.DriverBox, "DriverBox");
             this.DriverBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.DriverBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.DriverBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            resources.ApplyResources(this.DriverBox, "DriverBox");
             this.DriverBox.Name = "DriverBox";
             this.DriverBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.DriverBox_HelpRequested);
             // 
@@ -209,6 +209,7 @@
             // 
             // NumberBox
             // 
+            resources.ApplyResources(this.NumberBox, "NumberBox");
             this.NumberBox.AutoCompleteCustomSource.AddRange(new string[] {
             resources.GetString("NumberBox.AutoCompleteCustomSource"),
             resources.GetString("NumberBox.AutoCompleteCustomSource1"),
@@ -273,7 +274,6 @@
             this.NumberBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.NumberBox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.NumberBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            resources.ApplyResources(this.NumberBox, "NumberBox");
             this.NumberBox.Name = "NumberBox";
             this.NumberBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.NumberBox_HelpRequested);
             // 
@@ -318,6 +318,7 @@
             // 
             // ClassBox
             // 
+            resources.ApplyResources(this.ClassBox, "ClassBox");
             this.ClassBox.AutoCompleteCustomSource.AddRange(new string[] {
             resources.GetString("ClassBox.AutoCompleteCustomSource"),
             resources.GetString("ClassBox.AutoCompleteCustomSource1"),
@@ -326,7 +327,6 @@
             this.ClassBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.ClassBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.ClassBox.BackColor = System.Drawing.SystemColors.MenuBar;
-            resources.ApplyResources(this.ClassBox, "ClassBox");
             this.ClassBox.Name = "ClassBox";
             this.ClassBox.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.ClassBox_HelpRequested);
             // 
@@ -339,9 +339,9 @@
             // 
             // ResultsBox
             // 
+            resources.ApplyResources(this.ResultsBox, "ResultsBox");
             this.ResultsBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ResultsBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            resources.ApplyResources(this.ResultsBox, "ResultsBox");
             this.ResultsBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ResultsBox.Name = "ResultsBox";
             this.ResultsBox.ReadOnly = true;
