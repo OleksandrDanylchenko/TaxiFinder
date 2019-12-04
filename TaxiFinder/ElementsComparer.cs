@@ -14,12 +14,13 @@ namespace TaxiFinder
 
         private static double CalculateProbableSimilarity(string source, string target)
         {
-            if ((source == null) || (target == null)) return 0;
-            if ((source.Length == 0) || (target.Length == 0)) return 0;
-            if (source == target) return 1;
+            if (source == null || target == null) return 0;
 
             source = source.ToLower().Trim();
             target = target.ToLower().Trim();
+
+            if (source.Length == 0 || target.Length == 0) return 0;
+            if (source == target) return 1;
 
             var stepsToSame = ComputeLevenshteinDistance(source, target);
             return 1 - (stepsToSame / (double)Math.Max(source.Length, target.Length));
