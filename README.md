@@ -8,4 +8,5 @@ It allows the user to make mistakes in words, but if the similarity is >= 50% al
 Also, you can convert search results into a fancy HTML file.
 
 #### Demo:
-![](https://media.giphy.com/media/JTDa8SHa1XwUpz0mFk/giphy.gif)
+![.gif demo](https://media.giphy.com/media/JTDa8SHa1XwUpz0mFk/giphy.gif)
+![site demo](https://i.ibb.co/Q9MmqB1/Taxi-Demo-Site.png)
