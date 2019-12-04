@@ -136,6 +136,9 @@
   <data name="ConvertToHTMLButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>SF Mono, 13.8pt</value>
   </data>
+  <data name="ClassCheck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 418</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ClassBox.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -227,8 +230,8 @@
   <data name="ColorBox.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="DomButton.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="&gt;&gt;BrandBox.Name" xml:space="preserve">
+    <value>BrandBox</value>
   </data>
   <data name="ColorBox.AutoCompleteCustomSource1" xml:space="preserve">
     <value>Silver</value>
@@ -251,11 +254,17 @@
   <data name="$this.Text" xml:space="preserve">
     <value>TaxiFinder</value>
   </data>
+  <data name="ColorBox.AutoCompleteCustomSource6" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
   <data name="&gt;&gt;ColorBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="NumberBox.AutoCompleteCustomSource2" xml:space="preserve">
     <value>AB</value>
+  </data>
+  <data name="&gt;&gt;HTMLSaveDialog.Name" xml:space="preserve">
+    <value>HTMLSaveDialog</value>
   </data>
   <data name="NumberBox.AutoCompleteCustomSource13" xml:space="preserve">
     <value>KK</value>
@@ -272,9 +281,6 @@
   </data>
   <data name="&gt;&gt;LinqButton.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="NumberBox.AutoCompleteCustomSource19" xml:space="preserve">
-    <value>KP</value>
   </data>
   <data name="BrandBox.AutoCompleteCustomSource19" xml:space="preserve">
     <value>GMC</value>
@@ -327,9 +333,6 @@
   <data name="DriverBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 476</value>
   </data>
-  <data name="BrandBox.AutoCompleteCustomSource5" xml:space="preserve">
-    <value>Bentley</value>
-  </data>
   <data name="BrandBox.AutoCompleteCustomSource49" xml:space="preserve">
     <value>Volkswagen</value>
   </data>
@@ -341,6 +344,12 @@
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
+  </data>
+  <data name="ClearButton.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="BrandCheck.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SF Mono, 13.8pt</value>
   </data>
   <data name="BrandBox.AutoCompleteCustomSource23" xml:space="preserve">
     <value>Jaguar</value>
@@ -390,9 +399,6 @@
   <data name="LinqButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>SF Mono, 13.8pt</value>
   </data>
-  <data name="NumberBox.AutoCompleteCustomSource35" xml:space="preserve">
-    <value>HI</value>
-  </data>
   <data name="BrandBox.AutoCompleteCustomSource13" xml:space="preserve">
     <value>Dodge</value>
   </data>
@@ -404,6 +410,9 @@
   </data>
   <data name="DriverCheck.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="NumberBox.AutoCompleteCustomSource31" xml:space="preserve">
+    <value>HE</value>
   </data>
   <data name="DomButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 602</value>
@@ -450,8 +459,8 @@
   <data name="&gt;&gt;SearchButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="ClassCheck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 418</value>
+  <data name="&gt;&gt;NumberCheck.Name" xml:space="preserve">
+    <value>NumberCheck</value>
   </data>
   <data name="ClassCheck.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -476,9 +485,6 @@
   </data>
   <data name="NumberBox.AutoCompleteCustomSource39" xml:space="preserve">
     <value>HM</value>
-  </data>
-  <data name="ModelBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <data name="NumberBox.AutoCompleteCustomSource43" xml:space="preserve">
     <value>HP</value>
@@ -542,9 +548,6 @@
   </data>
   <data name="&gt;&gt;DriverCheck.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ConvertToHTMLButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BrandBox.AutoCompleteCustomSource41" xml:space="preserve">
     <value>Renault</value>
@@ -2354,8 +2357,8 @@
   <data name="&gt;&gt;ColorBox.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="SaxButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 602</value>
+  <data name="&gt;&gt;ConvertToHTMLButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="NumberBox.AutoCompleteCustomSource55" xml:space="preserve">
     <value>IE</value>
@@ -2411,14 +2414,14 @@
   <data name="BrandBox.AutoCompleteCustomSource45" xml:space="preserve">
     <value>Suzuki</value>
   </data>
-  <data name="&gt;&gt;ModelCheck.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;ResultsBox.Name" xml:space="preserve">
     <value>ResultsBox</value>
   </data>
   <data name="BrandBox.AutoCompleteCustomSource29" xml:space="preserve">
     <value>Lexus</value>
+  </data>
+  <data name="&gt;&gt;SearchButton.Name" xml:space="preserve">
+    <value>SearchButton</value>
   </data>
   <data name="ClassBox.AutoCompleteCustomSource" xml:space="preserve">
     <value>Econom</value>
@@ -2473,9 +2476,6 @@
   </data>
   <data name="LinqButton.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="ResultsBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>546, 12</value>
   </data>
   <data name="NumberBox.AutoCompleteCustomSource16" xml:space="preserve">
     <value>AO</value>
@@ -2621,8 +2621,8 @@
   <data name="&gt;&gt;SaxButton.Name" xml:space="preserve">
     <value>SaxButton</value>
   </data>
-  <data name="ColorBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SF Mono, 13.8pt</value>
+  <data name="SaxButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 602</value>
   </data>
   <data name="ColorBox.AutoCompleteCustomSource" xml:space="preserve">
     <value>White</value>
@@ -2645,8 +2645,8 @@
   <data name="NumberBox.AutoCompleteCustomSource49" xml:space="preserve">
     <value>HX</value>
   </data>
-  <data name="NumberBox.AutoCompleteCustomSource31" xml:space="preserve">
-    <value>HE</value>
+  <data name="&gt;&gt;ModelCheck.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="BrandCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 39</value>
@@ -2672,8 +2672,8 @@
   <data name="BrandBox.AutoCompleteCustomSource18" xml:space="preserve">
     <value>General Motors</value>
   </data>
-  <data name="BrandCheck.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SF Mono, 13.8pt</value>
+  <data name="BrandBox.MaxLength" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;ColorCheck.Parent" xml:space="preserve">
     <value>$this</value>
@@ -2693,6 +2693,9 @@
   <data name="DriverBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>392, 35</value>
   </data>
+  <data name="NumberBox.AutoCompleteCustomSource26" xml:space="preserve">
+    <value>BB</value>
+  </data>
   <data name="ModelCheck.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2708,8 +2711,8 @@
   <data name="ColorBox.AutoCompleteCustomSource13" xml:space="preserve">
     <value>Navy</value>
   </data>
-  <data name="NumberBox.AutoCompleteCustomSource20" xml:space="preserve">
-    <value>AT</value>
+  <data name="ColorBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SF Mono, 13.8pt</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1077, 971</value>
@@ -2732,8 +2735,8 @@
   <data name="&gt;&gt;BrandCheck.Name" xml:space="preserve">
     <value>BrandCheck</value>
   </data>
-  <data name="BrandBox.MaxLength" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="BrandBox.AutoCompleteCustomSource5" xml:space="preserve">
+    <value>Bentley</value>
   </data>
   <data name="NumberBox.AutoCompleteCustomSource7" xml:space="preserve">
     <value>KE</value>
@@ -2747,11 +2750,11 @@
   <data name="BrandBox.AutoCompleteCustomSource35" xml:space="preserve">
     <value>Mitsubishi</value>
   </data>
+  <data name="NumberBox.AutoCompleteCustomSource34" xml:space="preserve">
+    <value>BI</value>
+  </data>
   <data name="NumberCheck.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
-  </data>
-  <data name="&gt;&gt;NumberCheck.Name" xml:space="preserve">
-    <value>NumberCheck</value>
   </data>
   <data name="SearchButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>SF Mono, 13.8pt</value>
@@ -2762,9 +2765,6 @@
   <data name="NumberCheck.Text" xml:space="preserve">
     <value>Number:</value>
   </data>
-  <data name="BrandBox.AutoCompleteCustomSource" xml:space="preserve">
-    <value>Acura</value>
-  </data>
   <data name="ClearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 55</value>
   </data>
@@ -2774,8 +2774,8 @@
   <data name="&gt;&gt;LinqButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SearchButton.Name" xml:space="preserve">
-    <value>SearchButton</value>
+  <data name="ModelBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="HTMLSaveDialog.Title" xml:space="preserve">
     <value>Choose saving location:</value>
@@ -2789,8 +2789,8 @@
   <data name="BrandBox.AutoCompleteCustomSource33" xml:space="preserve">
     <value>Mercedes</value>
   </data>
-  <data name="ColorBox.AutoCompleteCustomSource6" xml:space="preserve">
-    <value>Yellow</value>
+  <data name="ResultsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>546, 12</value>
   </data>
   <data name="ModelBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 307</value>
@@ -2804,14 +2804,14 @@
   <data name="NumberBox.AutoCompleteCustomSource40" xml:space="preserve">
     <value>BO</value>
   </data>
-  <data name="&gt;&gt;BrandBox.Name" xml:space="preserve">
-    <value>BrandBox</value>
+  <data name="NumberBox.AutoCompleteCustomSource35" xml:space="preserve">
+    <value>HI</value>
   </data>
-  <data name="ClearButton.Text" xml:space="preserve">
-    <value>Clear</value>
+  <data name="BrandBox.AutoCompleteCustomSource" xml:space="preserve">
+    <value>Acura</value>
   </data>
-  <data name="&gt;&gt;HTMLSaveDialog.Name" xml:space="preserve">
-    <value>HTMLSaveDialog</value>
+  <data name="DomButton.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="NumberBox.AutoCompleteCustomSource21" xml:space="preserve">
     <value>KT</value>
@@ -2837,8 +2837,8 @@
   <data name="BrandBox.AutoCompleteCustomSource20" xml:space="preserve">
     <value>Honda</value>
   </data>
-  <data name="NumberBox.AutoCompleteCustomSource34" xml:space="preserve">
-    <value>BI</value>
+  <data name="NumberBox.AutoCompleteCustomSource19" xml:space="preserve">
+    <value>KP</value>
   </data>
   <data name="DriverCheck.Text" xml:space="preserve">
     <value>Driver:</value>
@@ -2846,8 +2846,8 @@
   <data name="LinqButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 33</value>
   </data>
-  <data name="NumberBox.AutoCompleteCustomSource26" xml:space="preserve">
-    <value>BB</value>
+  <data name="NumberBox.AutoCompleteCustomSource20" xml:space="preserve">
+    <value>AT</value>
   </data>
   <data name="BrandBox.AutoCompleteCustomSource47" xml:space="preserve">
     <value>Tesla</value>
