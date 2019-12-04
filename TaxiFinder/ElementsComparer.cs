@@ -23,7 +23,8 @@ namespace TaxiFinder
             if (source == target) return 1;
 
             var stepsToSame = ComputeLevenshteinDistance(source, target);
-            return 1 - (stepsToSame / (double)Math.Max(source.Length, target.Length));
+            var probability = 1 - (stepsToSame / (double) Math.Max(source.Length, target.Length));
+            return probability;
         }
 
         // Returns the number of steps required to transform the source string
