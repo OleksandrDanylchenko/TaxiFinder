@@ -106,7 +106,7 @@ namespace TaxiFinder
                         }
                     }
 
-                    if (newTaxi.IsFieldsInitialized())
+                    if (newTaxi.IsAllFieldsInitialized())
                     {
                         foundedTaxis.Add(newTaxi);
                     }
@@ -183,7 +183,7 @@ namespace TaxiFinder
                     // Reads the closing element
                     else if ((xr.NodeType == XmlNodeType.EndElement) && (xr.Name == "Taxi"))
                     {
-                        if (iteratorTaxi.IsFieldsInitialized())
+                        if (iteratorTaxi.IsAllFieldsInitialized())
                         {
                             var newTaxi = iteratorTaxi;
                             foundedTaxis.Add(newTaxi);

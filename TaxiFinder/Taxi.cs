@@ -18,13 +18,13 @@ namespace TaxiFinder
         public string Driver { get; set; }
         public string Number { get; set; }
 
-        public bool IsFieldsInitialized()
+        public bool IsAllFieldsInitialized()
         {
             return Brand != string.Empty && Model != string.Empty && Color != string.Empty &&
                    Class != string.Empty && Driver != string.Empty && Number != string.Empty;
         }
 
-        public bool IsFieldsBlank()
+        public bool IsAllFieldsBlank()
         {
             return Brand == string.Empty && Model == string.Empty && Color == string.Empty &&
                    Class == string.Empty && Driver == string.Empty && Number == string.Empty;

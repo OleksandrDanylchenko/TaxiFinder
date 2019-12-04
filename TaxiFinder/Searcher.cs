@@ -71,7 +71,7 @@ namespace TaxiFinder
                 desiredTaxi.Number = _form.NumberBox.Text;
             }
 
-            return desiredTaxi.IsFieldsBlank() ? null : desiredTaxi;
+            return desiredTaxi.IsAllFieldsBlank() ? null : desiredTaxi;
         }
 
         private ISearchEngineStrategy GetSearchEngine()
