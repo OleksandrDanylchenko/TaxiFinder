@@ -25,9 +25,9 @@ namespace TaxiFinder
                                     $"  Brand: {taxi.Brand}\n" +
                                     $"  Model: {taxi.Model}\n" +
                                     $"  Color: {taxi.Color}\n" +
-                                    $"  Class {taxi.Class}\n" +
-                                    $"  Driver {taxi.Driver}\n" +
-                                    $"  Number {taxi.Number}\n"))
+                                    $"  Class: {taxi.Class}\n" +
+                                    $"  Driver: {taxi.Driver}\n" +
+                                    $"  Number: {taxi.Number}\n"))
                 {
                     _outputBox.AppendText(taxiOutput);
                     ++outputNumber;
