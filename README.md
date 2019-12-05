@@ -10,3 +10,5 @@ Also, you can convert search results into a fancy HTML file.
 #### Demo:
 ![.gif demo](/TaxiDemo.gif)
 ![site demo](https://i.ibb.co/Q9MmqB1/Taxi-Demo-Site.png)
+
+#### Step-by-step guide: [TaxiFinderGuide.pdf](Шпаргалка до третьої лабораторної роботи.pdf)
